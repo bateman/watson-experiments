@@ -1,0 +1,29 @@
+from website
+Mentors 	abayer 		Andrew Bayer
+Mentors 	cos 		Konstantin Boudnik
+Mentors 	bdelacretaz 	Bertrand Delacretaz
+Mentors 	jim 		Jim Jagielski
+Mentors 	elecharny 	Emmanuel Lecharny
+Mentors 	rvs 		Roman Shaposhnik
+Committers 	cchampeau 	Cedric Champeau
+Committers 	paulk 		Paul King
+Committers 	glaforge 	Guillaume Laforge
+Committers 	pascalschumacher 	Pascal Schumacher
+Committers 	blackdrag 	Jochen Theodorou
+Committers 	aalmiray 	Andres Almiray
+Committers 	koenig 		Dierk Koenig
+Committers 	russel 		Dr. Russel Winder
+Committers 	keegan 		Keegan Witt
+Committers 	shils 		Shil Sinha
+
+
+from github groovy org
+
+Jochen Theodorou blackdrag
+Guillaume Laforge glaforge
+Jason Dillon jdillon
+Keegan Witt keeganwitt
+Cédric Champeau melix
+Pascal Schumacher PascalSchumacher
+Paul King paulk-asert
+Tim Yates timyates 
