@@ -2,6 +2,7 @@ import csv
 import os
 import glob
 import time
+import collections
 
 from utils import file_utils, db_utils
 from watson_developer_cloud import ToneAnalyzerV3
@@ -17,7 +18,7 @@ def main():
     cnx = db_utils.connect()
     base_dir = './emails'
     print ('building email corpus')
-    db_utils.build_corpus(cnx, committers, base_dir)
+    #db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
     results_dir = './results'
@@ -32,18 +33,25 @@ def main():
             # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
             wr.writerow(header)
 
+            rows = dict()
             lookup = '{0}/{1}/*.txt'.format(base_dir, dev['id'])
             for email in glob.glob(lookup):
                 y_m, _ = email.split('.txt', 1)
                 _, y_m = y_m.split(base_dir + os.sep + dev['id'] + os.sep)
+                y, m = y_m.split('-')
+                if len(m) == 1:
+                    y_m = '{0}-0{1}'.format(y, m)
                 with open(email, 'rb') as f:
                     content = f.read()
                     js = tone_analyze(content)
                     agreeableness_score = js['document_tone']['tone_categories'][0]['tones'][3]['score']
-                    row = (y_m, agreeableness_score)
-                    wr.writerow(row)
+                    rows[y_m] = agreeableness_score
                     # Wait for a bit
                     time.sleep(.300)
+
+            rows = collections.OrderedDict(sorted(rows.items()))
+            for key, value in rows.items():
+                wr.writerow([key, value])
 
         results.close()
 
