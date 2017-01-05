@@ -25,7 +25,7 @@ def build_corpus(cnx, committers, base_dir):
         sender = dev['email']
         sender_alias = dev['alias']
 
-        query = "select message_body, email_address from messages as M " \
+        query = "select message_body from messages as M " \
                 "inner join messages_people on messages_people.message_id = M.message_id " \
                 "where  M.mailing_list_url like '%groovy%' " \
                 "AND (email_address = '{0}' OR email_address = '{1}') " \
@@ -55,10 +55,9 @@ def build_corpus(cnx, committers, base_dir):
         cursor.close()
 
 
-def __process_results(cursor, out_dir, current_year, current_month):
+def __process_results(cursor, directory, current_year, current_month):
     # perform some clean up then save query results to file and
-    for (message_body, email_address) in cursor:
-        directory = '{0}/{1}'.format(out_dir, email_address)
+    for message_body in cursor:
         if not os.path.exists(directory):
             os.makedirs(directory)
         new_file = '{0}/{1}-{2}.txt'.format(directory, current_year, current_month)
