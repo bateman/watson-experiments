@@ -11,10 +11,7 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main():
-    cnx = db_utils.connect(user='root',
-                           password='5tartQu3ry1ng!',
-                           host='127.0.0.1',
-                           database='mlstats')
+    cnx = db_utils.connect()
     out_dir = './emails'
     db_utils.build_corpus(cnx, out_dir)
     db_utils.disconnect(cnx)
