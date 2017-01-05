@@ -9,10 +9,7 @@ def load_corpus(filename, type='txt'):
     if type == 'txt':
         reader = _file.readlines()
     elif type == 'csv':
-        #dialect = csv.Sniffer().sniff(_file.read(1024), delimiters=";,")
-        #_file.seek(0)
         reader = csv.reader(_file, delimiter=";")
-
     return reader
 
 

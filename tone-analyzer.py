@@ -1,4 +1,6 @@
 import csv
+import os
+import glob
 import time
 
 from utils import file_utils, db_utils
@@ -17,44 +19,33 @@ def main():
     db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
-    # corpus = file_utils.load_corpus('PR-corpus.csv', 'csv')
+    results_dir = './results'
+    if not os.path.exists(results_dir):
+        os.makedirs(results_dir)
+    for dev in committers:
+        file_name = '{0}/{1}.csv'.format(results_dir, dev['id'])
+        with open(file_name, 'wb') as results:
+            wr = csv.writer(results, delimiter=';')
+        header = ('year-month', 'agreeableness')
+        # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
+        wr.writerow(header)
 
-    # results = open('results.csv', 'wb')
-    # wr = csv.writer(results, quoting=csv.QUOTE_ALL)
-    # header = list()
-    # header.append('Content')
-    # writing_tones = {'Analytical', 'Confident', 'Tentative'}
-    # for x in writing_tones:
-    #     header.append(x)
-    # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
-    # for x in social_tones:
-    #     header.append(x)
-    # wr.writerow(header)
-    #
-    # scores = dict()
-    # for content in corpus:
-    #     js = tone_analyze(content[0])
-    #     categories = js['document_tone']['tone_categories']
-    #     for c in categories:
-    #         # writing
-    #         _scores = c['tones']
-    #         for s in _scores:
-    #             scores[s['tone_name']] = s['score']
-    #     # write a row
-    #     row = list()
-    #     row.append(content[0])
-    #     for x in writing_tones:
-    #         row.append(scores[x])
-    #     for x in social_tones:
-    #         row.append(scores[x])
-    #     wr.writerow(row)
-    #     # Wait for a bit
-    #     time.sleep(.500)
-    #
-    # results.close()
+        lookup = '{0}/{1}/*.txt"'.format(base_dir, dev['id'])
+        for email in glob.glob(lookup):
+            y_m = email.split('.', 1)
+            with open(email, 'r') as f:
+                content = f.read()
+                js = tone_analyze(content)
+                agreeableness_score = js['document_tone']['tone_categories'][2]['tones'][3]['score']
+                row = (y_m, agreeableness_score)
+                wr.writerow(row)
+                # Wait for a bit
+                time.sleep(.300)
+
+        results.close()
 
 
-def tone_analyze(text, tones='social,language', sentences=False):
+def tone_analyze(text, tones='social', sentences=False):
     js = tone_analyzer.tone(text, tones, sentences)
     return js
 
