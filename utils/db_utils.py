@@ -21,12 +21,12 @@ def disconnect(cnx):
 def build_corpus(cnx, out_dir):
     sender = 'cchampeau@apache.org'
     sender_alias = 'cedric.champeau@gmail.com'
-    query = "select message_body, email_address from messages as M" \
-            "inner join messages_people on messages_people.message_id = M.message_id" \
-            "where  M.mailing_list_url like '%groovy%'" \
-            "AND (email_address = '{0}' OR email_address = '{1}')" \
-            "AND type_of_recipient = 'From'" \
-            "AND year(arrival_date) = %s AND month(arrival_date) = %s" \
+    query = "select message_body, email_address from messages as M " \
+            "inner join messages_people on messages_people.message_id = M.message_id " \
+            "where  M.mailing_list_url like '%groovy%' " \
+            "AND (email_address = '{0}' OR email_address = '{1}') " \
+            "AND type_of_recipient = 'From' " \
+            "AND year(arrival_date) = %s AND month(arrival_date) = %s " \
             "order by arrival_date ASC;".format(sender, sender_alias)
     cursor = cnx.cursor()
 
@@ -60,7 +60,7 @@ def __process_results(cursor, out_dir, current_year, current_month):
         new_file = '{0}/{1}-{2}.txt'.format(directory, current_year, current_month)
 
         clean_message_body = __clean_up(message_body)
-        with open(new_file, 'w', encoding='utf-8') as f:
+        with open(new_file, 'w') as f:
             f.write(clean_message_body)
             f.close()
 
@@ -73,4 +73,5 @@ def __clean_up(message_body):
     clean_message_body = re.sub(r'^\+', '', clean_message_body)
     clean_message_body = re.sub(r'^---\+', '', clean_message_body)
     clean_message_body = re.sub(r'^On .* wrote:\\', '', clean_message_body)
+    clean_message_body = u' '.join(clean_message_body).encode('utf-8').strip()
     return clean_message_body
