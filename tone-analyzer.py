@@ -11,9 +11,11 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main():
-    cnx = db_utils.connect()
-    out_dir = './emails'
-    db_utils.build_corpus(cnx, out_dir)
+    committers = file_utils.load_emails('./groovy-coreteam.csv')
+    #cnx = db_utils.connect()
+    cnx = 0
+    base_dir = './emails'
+    db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
     # corpus = file_utils.load_corpus('PR-corpus.csv', 'csv')
