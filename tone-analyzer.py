@@ -16,31 +16,33 @@ def main():
     committers = file_utils.load_emails('./groovy-coreteam.csv')
     cnx = db_utils.connect()
     base_dir = './emails'
+    print ('building email corpus')
     db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
     results_dir = './results'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
+    print ('analyzing tone')
     for dev in committers:
         file_name = '{0}/{1}.csv'.format(results_dir, dev['id'])
         with open(file_name, 'wb') as results:
             wr = csv.writer(results, delimiter=';')
-        header = ('year-month', 'agreeableness')
-        # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
-        wr.writerow(header)
+            header = ('year-month', 'agreeableness')
+            # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
+            wr.writerow(header)
 
-        lookup = '{0}/{1}/*.txt"'.format(base_dir, dev['id'])
-        for email in glob.glob(lookup):
-            y_m = email.split('.', 1)
-            with open(email, 'rb') as f:
-                content = f.read()
-                js = tone_analyze(content)
-                agreeableness_score = js['document_tone']['tone_categories'][2]['tones'][3]['score']
-                row = (y_m, agreeableness_score)
-                wr.writerow(row)
-                # Wait for a bit
-                time.sleep(.300)
+            lookup = '{0}/{1}/*.txt"'.format(base_dir, dev['id'])
+            for email in glob.glob(lookup):
+                y_m = email.split('.', 1)
+                with open(email, 'rb') as f:
+                    content = f.read()
+                    js = tone_analyze(content)
+                    agreeableness_score = js['document_tone']['tone_categories'][2]['tones'][3]['score']
+                    row = (y_m, agreeableness_score)
+                    wr.writerow(row)
+                    # Wait for a bit
+                    time.sleep(.300)
 
         results.close()
 
