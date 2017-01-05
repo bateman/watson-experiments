@@ -1,0 +1,3 @@
+Yes, it was in 2.3.4 to make @Sortable work with @CompileStatic/@TypeChecked.
+See here:and
+SortableTransformTest#testSortableWithCompileStaticCheers, Paul.

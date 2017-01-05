@@ -1,0 +1,4 @@
+That's correct David. The dollar slashy string handles a bunch of edge
+cases that arise with slashy strings in a more sane way but are still
+parsed after unicode characters.Cheers, Paul.On Wed, Feb 10, 2016 at 2:28 AM, David M. Karr
+ wrote:

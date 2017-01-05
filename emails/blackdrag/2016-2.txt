@@ -1,0 +1,5 @@
+in case of Chameleon implements ColorChanging the answer is yes. In case of... no. Here Chameleon does not know anything about the trait and the 
+trait isused like a facade around the object. For the same reason 
+mylizard is an instance of ColorChanging, but not of Chameleon anymoreIt could probably made possible, if you change the meta class used for 
+the Chameleon object you proxy with the trait. But there is no such 
+implementation right nowbye Jochen

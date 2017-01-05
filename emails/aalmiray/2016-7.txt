@@ -1,0 +1,11 @@
+Hmm looks like we missed `ColorPicker` in the 8.0.0 release. If you could
+create an issue
+at In the meantime, you can manually register a factory that can handle a
+`colorPicker` node, like this    SceneGraphBuilder sgb = new SceneGraphBuilder()
+    sgb.registerFactory('colorPicker', new ControlFactory(ColorPicker))Cheers,
+Andres-------------------------------------------
+Java Champion; Groovy Enthusiast--
+What goes up, must come down. Ask any system administrator.
+There are 10 types of people in the world: Those who understand binary, and
+those who don't.
+To understand recursion, we must first understand recursion.

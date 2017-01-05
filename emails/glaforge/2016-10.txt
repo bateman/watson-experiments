@@ -1,0 +1,6 @@
+Funny, but it looks like the Scala community woke up and started voted en
+masse.Time to cast your vote for Groovy if you haven't done so yet, everyone!Guillaume-- 
+Guillaume Laforge
+Apache Groovy committer & PMC Vice-President
+Developer  Cloud PlatformBlog: 
+Social: @glaforge  / Google+

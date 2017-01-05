@@ -1,0 +1,6 @@
+Am 25.06.2015 22:15, schrieb Paolo Piersanti:hmmm I wonder if the change 737bbe1f326ca1a43184dde7e544b67be546cc5e 
+introduced that. It seems the logic in MetaClassImpl and in 
+ClosureMetaClass differ for this case. So we do have a bug for sure. But 
+I agree, something is not right herebye blackdrag-- 
+Jochen "blackdrag" Theodorou
+blog:

@@ -1,0 +1,5 @@
+That is the current expected behaviour. The grammar currently doesn't
+support slashy syrings straight after println unless you add the
+parentheses. I can't recall the rationale just now. Perhaps it's something
+we could look at in the Parrot parser - or an attempt to add it might make
+it clear what the rationale is/was.Cheers, Paul

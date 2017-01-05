@@ -1,0 +1,10 @@
+Jim,You beat me to it again :-)Updating the Gradle version number in build.gradle, running the wrapper
+task, running all the tests for a green, and if green committing, and
+then creating a pull request is the exact process.[â€¦]As far as I am aware there are no missing changes. My personal fork on
+GitHub should be the same as the GPars mainline repository. Last change
+I see was 2015-09-07T23:32:36+01:00.-- 
+Russel.
+=============================================================================
+Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
+41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
+London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder

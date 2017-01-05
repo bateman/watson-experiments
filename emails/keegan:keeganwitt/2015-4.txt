@@ -1,0 +1,11 @@
+True.  I wish Nabble would fail to post it to itself if you're not
+subscribed.  But it remains a popular tool.I wondered about the migration too.  Because it will change all over again
+when we go from @groovy.incubator.apache.org to @groovy.apache.org.
+SearchingNabble's support  list, it looks like they've
+switched servers for others.  I suggest we reach out to them and ask about
+that.  That way we can keep the top level group
+ somewhat sane.  The only downside of
+moving instead of separate lists in the group is messages posted to old
+lists after we intended everyone to make the switch won't be archived.  But
+that should be pretty minimal in the grand scheme of things.On Wed, Apr 29, 2015 at 10:45 AM, Guillaume Laforge 
+wrote:

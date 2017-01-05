@@ -1,0 +1,2 @@
+For type safe sql those days I would recommend to use jOOQ.
+Le 23 juin 2016 06:58, "Wilson MacGyver"  a Ã©crit :

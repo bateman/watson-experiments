@@ -1,0 +1,2 @@
+Hi Marc,You could use the map access syntax i.e. foo['id'] instead and cast/coerce
+the result to the appropriate type.

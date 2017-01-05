@@ -1,0 +1,5 @@
+It is enough for step one. I already had problems with it (discovered some
+bugs in the type checker...), but it should be ok. We need to make sure we
+have delegated properties too (aka, that extension methods work if you
+define get/set methods). It doesn't solve the issue of IDE support, though
+:(2016-05-23 16:43 GMT+02:00 Jochen Theodorou :

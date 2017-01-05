@@ -1,0 +1,7 @@
+Not 100% unmaintained though, as you can see in the commits, Andy
+Clement, for instance, did a few changes recently, to accomodate
+GMavenPlus: Guillaume-- 
+Guillaume Laforge
+Apache Groovy committer & PMC member
+Product Ninja & Advocate at RestletBlog: 
+Social: @glaforge / Google+

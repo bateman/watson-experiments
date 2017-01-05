@@ -1,0 +1,5 @@
+What's the date, and URL of the CfP?-- 
+Guillaume Laforge
+Apache Groovy committer & PMC member
+Product Ninja & Advocate at Restlet Blog: 
+Social: @glaforge  / Google+

@@ -1,0 +1,10 @@
+[â€¦][â€¦]It is worth remembering that whilst Kotlin is a FOSS project, it is
+being developed by JetBrains for writing the JetBrains products.
+Whether or not Kotlin gains traction with others, JetBrains are, at
+least in the short and medium term committed to making a "better Java".
+-- 
+Russel.
+=============================================================================
+Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
+41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
+London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder

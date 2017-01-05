@@ -1,0 +1,5 @@
+Eval.x(v) should just work as well.Regarding resources / performance, it means spinning the parser and
+compiler, so it's not for free. Doing your own string parsing logic might
+be more efficient.
+Depends on how frequently you have to do that.
+Le 20 avr. 2016 07:57, "Gerald Wiltse"  a Ã©crit :

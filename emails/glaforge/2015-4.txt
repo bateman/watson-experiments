@@ -1,0 +1,15 @@
+Hi Steve,We haven't yet scheduled the next Groovy release, as there's still work to
+be done for being able to release on the new Apache infrastructure. So
+we're not quite ready yet.
+Are you waiting for a particular bug fix or enhancement that is important
+to you?As to being "materially different" or not... no, it's still the very same
+Groovy :-)
+Same Apache 2 license, same "content organization" (if by that you mean
+same packages, etc.)There might be some changes like changed Maven coordinates, for example.
+Things like package changes might happen, but for a major version like 3.0,
+not for 2.x.y.In conclusion, you shouldn't be much affected by the move into the Apache
+incubator.Guillaume2015-04-30 23:34 GMT+02:00 Steve Amerige :-- 
+Guillaume Laforge
+Groovy Project Manager
+Product Ninja & Advocate at Restlet Blog: 
+Social: @glaforge  / Google+

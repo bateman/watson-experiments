@@ -1,0 +1,5 @@
+For your first example, you could do one of the following:[1,2,3]*.asType(String), which is equivalent to but slower than
+[1,2,3]*.toString()Generally, collection*.asType(ClassYouWant) will yield the element type
+changes you want, but you will have to cast the resulting ArrayList to the
+type of collection you want.On Tue, Apr 28, 2015 at 2:16 PM, Winnebeck, Jason <
+Jason.Winnebeck@windstream.com> wrote:

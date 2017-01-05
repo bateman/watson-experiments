@@ -1,0 +1,5 @@
+To clarify my point:We would copy the code over from pcollections. 
+The difference is that we do not _maintain_ it in a different project that we have a dependency upon.
+We maintain it as part of the core.
+Also: pcollections may have other users than Groovy. But Groovy core doesn't have to deal with that.cheers
+Dierk

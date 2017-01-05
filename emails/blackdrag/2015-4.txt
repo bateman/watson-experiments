@@ -1,0 +1,13 @@
+Am 23.04.2015 11:54, schrieb CÃ©dric Champeau:well, for me that is a tad too general ;)in my experience indy can be as fast as primopts, but it largely depends 
+on the JVM side how well this goes. primopts really shine in a single 
+aspect, that is a direct method call under certain circumstances. indy 
+can be fast, but it cannot beat a direct method call in Java with a 
+mutable callsite in my experience. And of course, primopts can have 
+massive slowdowns, if the guarded code blocks are too small. In worst 
+case ind can be much faster than primopts. But of course it is true, the 
+general trend is towards primopts being fasterAs for @CompileStatic.. it gets the information independent of if indy 
+is used or not. It is more a question of if dynamic method calls and 
+such are done with indy. But since @CompileStatic should not use them, 
+there should be no trouble. If there is, it is most likely a bugbye blackdrag-- 
+Jochen "blackdrag" Theodorou
+blog:

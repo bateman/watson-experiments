@@ -1,0 +1,7 @@
+JSonSlurper / Boon should cope well with such a size, it's not that huge :-)
+But have a look at Groovy's JsonLexer too, in case it fits your need for
+pure streaming.2015-05-31 14:12 GMT+02:00 Rakesh Patel :-- 
+Guillaume Laforge
+Groovy Project Manager
+Product Ninja & Advocate at Restlet Blog: 
+Social: @glaforge  / Google+
