@@ -69,9 +69,11 @@ def __clean_up(message_body):
     soup = BS4(message_body, 'html.parser')
     clean_message_body = soup.text
 
-    clean_message_body = re.sub(r'^>+', '', clean_message_body)
-    clean_message_body = re.sub(r'^\+', '', clean_message_body)
-    clean_message_body = re.sub(r'^---\+', '', clean_message_body)
-    clean_message_body = re.sub(r'^On .* wrote:\\', '', clean_message_body)
+    clean_message_body = re.sub(r'^>+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'^\+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'^---\+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'On .* wrote:.*', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'\n[\t\s]*\n+', '', clean_message_body, flags=re.MULTILINE)
+
     clean_message_body = u''.join(clean_message_body).encode('utf-8').strip()
     return clean_message_body
