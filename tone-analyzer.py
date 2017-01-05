@@ -33,7 +33,7 @@ def main():
         lookup = '{0}/{1}/*.txt"'.format(base_dir, dev['id'])
         for email in glob.glob(lookup):
             y_m = email.split('.', 1)
-            with open(email, 'r') as f:
+            with open(email, 'rb') as f:
                 content = f.read()
                 js = tone_analyze(content)
                 agreeableness_score = js['document_tone']['tone_categories'][2]['tones'][3]['score']
