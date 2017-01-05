@@ -4,11 +4,11 @@ from bs4 import BeautifulSoup as BS4
 import re
 
 
-def connect(user='root',
-            password='5tartQu3ry1ng!',
-            host='127.0.0.1',
-            database='mlstats'):
-    cnx = mysql.connector.connect(user, password, host, database)
+def connect():
+    cnx = mysql.connector.connect(user='root',
+                                  password='5tartQu3ry1ng!',
+                                  host='127.0.0.1',
+                                  database='mlstats')
     return cnx
 
 
