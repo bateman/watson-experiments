@@ -35,3 +35,28 @@ messages_people;
 | mailing_list_url  | varchar(255)           | NO   | PRI | NULL    |       |
 | email_address     | varchar(255)           | NO   | PRI | NULL    |       |
 +-------------------+------------------------+------+-----+---------+-------+
+
+
+queries:  
+
+* Selezionare tutti i messagge body delle email inviate da un committer a tutte le mailing list groovy in un determinato mese
+select message_body from messages as M
+inner join messages_people on messages_people.message_id = M.message_id
+where  M.mailing_list_url like '%groovy%' 
+AND (email_address = 'cchampeau@apache.org' OR email_address = 'cedric.champeau@gmail.com') and type_of_recipient = 'From'
+AND year(arrival_date) = 2016 AND month(arrival_date) = 12
+order by arrival_date ASC;
+
+* scoprire first arrival_date and last arrival_date (estremi intervallo)
+select arrival_date from messages
+order by arrival_date ASC
+limit 1;
+
+ 2015-03-30 21:28:31
+
+
+select arrival_date from messages
+order by arrival_date DESC
+limit 1;
+
+ 2016-12-21 22:43:05
