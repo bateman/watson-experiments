@@ -17,7 +17,7 @@ def main():
     cnx = db_utils.connect()
     base_dir = './emails'
     print ('building email corpus')
-    db_utils.build_corpus(cnx, committers, base_dir)
+    #db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
     results_dir = './results'
@@ -32,13 +32,13 @@ def main():
             # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
             wr.writerow(header)
 
-            lookup = '{0}/{1}/*.txt"'.format(base_dir, dev['id'])
+            lookup = '{0}/{1}/*.txt'.format(base_dir, dev['id'])
             for email in glob.glob(lookup):
                 y_m = email.split('.', 1)
                 with open(email, 'rb') as f:
                     content = f.read()
                     js = tone_analyze(content)
-                    agreeableness_score = js['document_tone']['tone_categories'][2]['tones'][3]['score']
+                    agreeableness_score = js['document_tone']['tone_categories'][0]['tones'][3]['score']
                     row = (y_m, agreeableness_score)
                     wr.writerow(row)
                     # Wait for a bit
