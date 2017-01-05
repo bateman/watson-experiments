@@ -17,7 +17,7 @@ def main():
     cnx = db_utils.connect()
     base_dir = './emails'
     print ('building email corpus')
-    #db_utils.build_corpus(cnx, committers, base_dir)
+    db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
     results_dir = './results'
@@ -35,7 +35,7 @@ def main():
             lookup = '{0}/{1}/*.txt'.format(base_dir, dev['id'])
             for email in glob.glob(lookup):
                 y_m, _ = email.split('.txt', 1)
-                y_m = y_m.split(base_dir + os.sep)
+                _, y_m = y_m.split(base_dir + os.sep + dev['id'] + os.sep)
                 with open(email, 'rb') as f:
                     content = f.read()
                     js = tone_analyze(content)
