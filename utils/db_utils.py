@@ -60,9 +60,7 @@ def build_corpus(cnx, committers, base_dir):
 def __process_results(cursor, out_dir, current_year, current_month):
     # perform some clean up then save query results to file and
     for (message_body, email_address) in cursor:
-        directory = '{0}/{1}'.format(out_dir, email_address)
-
-        new_file = '{0}/{1}-{2}.txt'.format(directory, current_year, current_month)
+        new_file = '{0}/{1}-{2}.txt'.format(out_dir, current_year, current_month)
 
         clean_message_body = __clean_up(message_body)
         with open(new_file, 'w') as f:
