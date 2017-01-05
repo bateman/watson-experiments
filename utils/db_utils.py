@@ -69,9 +69,9 @@ def __clean_up(message_body):
     soup = BS4(message_body, 'html.parser')
     clean_message_body = soup.text
 
-    clean_message_body = re.sub(r'^(\s*)?>+', '', clean_message_body, flags=re.MULTILINE)
-    clean_message_body = re.sub(r'^(\s*)\+', '', clean_message_body, flags=re.MULTILINE)
-    clean_message_body = re.sub(r'^(\s*)---\+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'^\s*>+( .*)?', '', clean_message_body, flags=re.MULTILINE)
+    #clean_message_body = re.sub(r'^\s*\+', '', clean_message_body, flags=re.MULTILINE)
+    #clean_message_body = re.sub(r'^\s*---\+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'https?:\/\/\S*', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'[\w\.-]+ @ [\w\.-]+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'On .* wrote:.*', '', clean_message_body, flags=re.MULTILINE)
