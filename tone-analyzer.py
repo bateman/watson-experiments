@@ -34,7 +34,8 @@ def main():
 
             lookup = '{0}/{1}/*.txt'.format(base_dir, dev['id'])
             for email in glob.glob(lookup):
-                y_m = email.split('.', 1)
+                y_m, _ = email.split('.txt', 1)
+                y_m = y_m.split(base_dir + os.sep)
                 with open(email, 'rb') as f:
                     content = f.read()
                     js = tone_analyze(content)
