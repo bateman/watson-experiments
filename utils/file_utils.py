@@ -16,3 +16,6 @@ def load_corpus(filename, type='txt'):
     return reader
 
 
+
+
+

@@ -1,7 +1,7 @@
 import csv
 import time
 
-from utils import utils
+from utils import file_utils, db_utils
 from watson_developer_cloud import ToneAnalyzerV3
 
 tone_analyzer = ToneAnalyzerV3(
@@ -11,41 +11,46 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main():
-    corpus = utils.load_corpus('PR-corpus.csv', 'csv')
+    cnx = db_utils.connect()
+    out_dir = './emails'
+    db_utils.build_corpus(cnx, out_dir)
+    db_utils.disconnect(cnx)
 
-    results = open('results.csv', 'wb')
-    wr = csv.writer(results, quoting=csv.QUOTE_ALL)
-    header = list()
-    header.append('Content')
-    writing_tones = {'Analytical', 'Confident', 'Tentative'}
-    for x in writing_tones:
-        header.append(x)
-    social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
-    for x in social_tones:
-        header.append(x)
-    wr.writerow(header)
+    # corpus = file_utils.load_corpus('PR-corpus.csv', 'csv')
 
-    scores = dict()
-    for content in corpus:
-        js = tone_analyze(content[0])
-        categories = js['document_tone']['tone_categories']
-        for c in categories:
-            # writing
-            _scores = c['tones']
-            for s in _scores:
-                scores[s['tone_name']] = s['score']
-        # write a row
-        row = list()
-        row.append(content[0])
-        for x in writing_tones:
-            row.append(scores[x])
-        for x in social_tones:
-            row.append(scores[x])
-        wr.writerow(row)
-        # Wait for a bit
-        time.sleep(.500)
-
-    results.close()
+    # results = open('results.csv', 'wb')
+    # wr = csv.writer(results, quoting=csv.QUOTE_ALL)
+    # header = list()
+    # header.append('Content')
+    # writing_tones = {'Analytical', 'Confident', 'Tentative'}
+    # for x in writing_tones:
+    #     header.append(x)
+    # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
+    # for x in social_tones:
+    #     header.append(x)
+    # wr.writerow(header)
+    #
+    # scores = dict()
+    # for content in corpus:
+    #     js = tone_analyze(content[0])
+    #     categories = js['document_tone']['tone_categories']
+    #     for c in categories:
+    #         # writing
+    #         _scores = c['tones']
+    #         for s in _scores:
+    #             scores[s['tone_name']] = s['score']
+    #     # write a row
+    #     row = list()
+    #     row.append(content[0])
+    #     for x in writing_tones:
+    #         row.append(scores[x])
+    #     for x in social_tones:
+    #         row.append(scores[x])
+    #     wr.writerow(row)
+    #     # Wait for a bit
+    #     time.sleep(.500)
+    #
+    # results.close()
 
 
 def tone_analyze(text, tones='social,language', sentences=False):
