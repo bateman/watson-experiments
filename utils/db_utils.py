@@ -66,7 +66,7 @@ def __process_results(cursor, out_dir, current_year, current_month):
 
 
 def __clean_up(message_body):
-    soup = BS4(message_body)
+    soup = BS4(message_body, 'html.parser')
     clean_message_body = soup.text
 
     clean_message_body = re.sub(r'^>+', '', clean_message_body)
