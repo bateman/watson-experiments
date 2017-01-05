@@ -57,7 +57,7 @@ def build_corpus(cnx, committers, base_dir):
 
 def __process_results(cursor, directory, current_year, current_month):
     # perform some clean up then save query results to file and
-    for message_body in cursor:
+    for (message_body) in cursor:
         if not os.path.exists(directory):
             os.makedirs(directory)
         new_file = '{0}/{1}-{2}.txt'.format(directory, current_year, current_month)
