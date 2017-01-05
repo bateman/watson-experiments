@@ -18,37 +18,41 @@ def disconnect(cnx):
 
 # first email march 2015
 # last email december 2016
-def build_corpus(cnx, out_dir):
-    sender = 'cchampeau@apache.org'
-    sender_alias = 'cedric.champeau@gmail.com'
-    query = "select message_body, email_address from messages as M " \
-            "inner join messages_people on messages_people.message_id = M.message_id " \
-            "where  M.mailing_list_url like '%groovy%' " \
-            "AND (email_address = '{0}' OR email_address = '{1}') " \
-            "AND type_of_recipient = 'From' " \
-            "AND year(arrival_date) = %s AND month(arrival_date) = %s " \
-            "order by arrival_date ASC;".format(sender, sender_alias)
-    cursor = cnx.cursor()
+def build_corpus(cnx, committers, base_dir):
+    for dev in committers:
+        id = dev['id']
+        out_dir = '{0}/{1}'.format(base_dir, id)
+        sender = dev['email']
+        sender_alias = dev['alias']
 
-    # year 2015
-    current_month = 3
-    current_year = 2015
-    while current_month <= 12:
-        # execute  query
-        cursor.execute(query, (current_year, current_month))
-        __process_results(cursor, out_dir, current_year, current_month)
-        current_month += 1
+        query = "select message_body, email_address from messages as M " \
+                "inner join messages_people on messages_people.message_id = M.message_id " \
+                "where  M.mailing_list_url like '%groovy%' " \
+                "AND (email_address = '{0}' OR email_address = '{1}') " \
+                "AND type_of_recipient = 'From' " \
+                "AND year(arrival_date) = %s AND month(arrival_date) = %s " \
+                "order by arrival_date ASC;".format(sender, sender_alias)
+        cursor = cnx.cursor()
 
-    # year 2016
-    current_month = 1
-    current_year = 2016
-    while current_month <= 12:
-        # execute  query
-        cursor.execute(query, (current_year, current_month))
-        __process_results(cursor, out_dir, current_year, current_month)
-        current_month += 1
+        # year 2015
+        current_month = 3
+        current_year = 2015
+        while current_month <= 12:
+            # execute  query
+            cursor.execute(query, (current_year, current_month))
+            __process_results(cursor, out_dir, current_year, current_month)
+            current_month += 1
 
-    cursor.close()
+        # year 2016
+        current_month = 1
+        current_year = 2016
+        while current_month <= 12:
+            # execute  query
+            cursor.execute(query, (current_year, current_month))
+            __process_results(cursor, out_dir, current_year, current_month)
+            current_month += 1
+
+        cursor.close()
 
 
 def __process_results(cursor, out_dir, current_year, current_month):
@@ -70,8 +74,9 @@ def __clean_up(message_body):
     clean_message_body = soup.text
 
     clean_message_body = re.sub(r'^\s*>+( .*)?', '', clean_message_body, flags=re.MULTILINE)
-    #clean_message_body = re.sub(r'^\s*\+', '', clean_message_body, flags=re.MULTILINE)
-    #clean_message_body = re.sub(r'^\s*---\+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'^\s*\+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'^\s*---\+', '', clean_message_body, flags=re.MULTILINE)
+    # dates
     clean_message_body = re.sub(r'https?:\/\/\S*', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'[\w\.-]+ @ [\w\.-]+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'On .* wrote:.*', '', clean_message_body, flags=re.MULTILINE)
