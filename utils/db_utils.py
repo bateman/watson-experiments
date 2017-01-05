@@ -72,6 +72,8 @@ def __clean_up(message_body):
     clean_message_body = re.sub(r'^>+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'^\+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'^---\+', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'https?:\/\/\S*', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'[\w\.-]+ @ [\w\.-]+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'On .* wrote:.*', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'\n[\t\s]*\n+', '', clean_message_body, flags=re.MULTILINE)
 
