@@ -22,6 +22,8 @@ def build_corpus(cnx, committers, base_dir):
     for dev in committers:
         id = dev['id']
         out_dir = '{0}/{1}'.format(base_dir, id)
+        if not os.path.exists(out_dir):
+            os.makedirs(out_dir)
         sender = dev['email']
         sender_alias = dev['alias']
 
@@ -58,11 +60,9 @@ def build_corpus(cnx, committers, base_dir):
 def __process_results(cursor, directory, current_year, current_month):
     # perform some clean up then save query results to file and
     for (message_body) in cursor:
-        if not os.path.exists(directory):
-            os.makedirs(directory)
-        new_file = '{0}/{1}-{2}.txt'.format(directory, current_year, current_month)
-
         clean_message_body = __clean_up(message_body)
+
+        new_file = '{0}/{1}-{2}.txt'.format(directory, current_year, current_month)
         with open(new_file, 'w') as f:
             f.write(clean_message_body)
             f.close()
