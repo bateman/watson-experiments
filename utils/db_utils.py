@@ -73,5 +73,5 @@ def __clean_up(message_body):
     clean_message_body = re.sub(r'^\+', '', clean_message_body)
     clean_message_body = re.sub(r'^---\+', '', clean_message_body)
     clean_message_body = re.sub(r'^On .* wrote:\\', '', clean_message_body)
-    clean_message_body = u' '.join(clean_message_body).encode('utf-8').strip()
+    clean_message_body = u''.join(clean_message_body).encode('utf-8').strip()
     return clean_message_body
