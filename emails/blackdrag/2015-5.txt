@@ -1,5 +1,0 @@
-Am 29.05.2015 15:32, schrieb Miro Bezjak:
-[...]that would mean the isCName method missing is a false flag and really 
-this is about capitalization of property namesbye blackdrag-- 
-Jochen "blackdrag" Theodorou
-blog:

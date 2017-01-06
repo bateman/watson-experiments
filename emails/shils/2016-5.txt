@@ -1,3 +1,0 @@
-Yes, though this is specific to methods with one parameter and only occurs
-if the method call is not statically compiled. Seefor
-a discussion.

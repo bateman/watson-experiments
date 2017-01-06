@@ -1,5 +1,0 @@
-Am 24.08.2015 17:30, schrieb JamieEchlin:well, I am no fan of warnings, which is why I never really implemented 
-them. There are some basics for that, but the wiring is missing. If you 
-want to contribute that, you are welcome to do sobye blackdrag-- 
-Jochen "blackdrag" Theodorou
-blog:

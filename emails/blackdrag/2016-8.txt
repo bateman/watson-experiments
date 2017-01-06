@@ -1,2 +1,0 @@
-comparing with Java the last return should be annotated with the line 
-with the closing brace of the methodthat now is kind of a limitation of our bytecode generationbye Jochen

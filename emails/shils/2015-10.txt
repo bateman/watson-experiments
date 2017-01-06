@@ -1,8 +1,0 @@
-I was able to replicate the error with the following code:interface Foo extends Iterable {
-}@groovy.transform.CompileStatic
-void test(Foo foo) {
-    for (x in foo) {
-        println 'ok'
-    }
-}In this example, the error occurs during class generation while writing the
-`for` statement in the test(Foo) method.The error no longer seems to occur as of Groovy 2.3.8.

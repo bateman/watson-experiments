@@ -1,5 +1,0 @@
-If the class is made to be thread safe, then it will need quite a bit 
-work on the synchronization. As it is now, it is far from threadsafe. 
-That already starts with the multiple locks in use and if that is really 
-correct - multiple locks in methods calling each other can easily create 
-deadlocks for example.bye blackdrag

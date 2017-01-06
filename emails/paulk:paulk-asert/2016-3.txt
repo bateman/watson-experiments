@@ -1,3 +1,0 @@
-Can you give an example of what isn't working as expected? contains()
-should be good enough if you have the appropriate line endings in your
-expected text. Otherwise regex searching might be the way to go.Cheers, Paul.

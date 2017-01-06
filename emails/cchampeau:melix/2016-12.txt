@@ -1,5 +1,0 @@
-Hi folks,I'd like to introduce you to Sergei Egorov, our new Apache Groovy
-committer! Some of you may already know Sergei for his work on macros,
-which are going to make appearance in Apache Groovy 2.5. He is a very
-talented developer with the skills we need to help Groovy move forward.A warm welcome, and congratulations, to Sergei!Sergei, would you mind telling a few words about you?On behalf of the Apache Groovy team
-CÃ©dric

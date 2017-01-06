@@ -1,2 +1,0 @@
-the processes are started but they are "lazy" and concurrent.Isn't that nice? Working in a (unix) shell is like working in a functional language...cheers
-Dierk

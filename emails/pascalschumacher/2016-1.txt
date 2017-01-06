@@ -1,4 +1,0 @@
-Am 29.01.2016 um 18:12 schrieb Aseem Bansal:I just took a look at the groovysh implementation. Methods like these 
-are added "by hand", and they were missing for File. I have just added 
-them, so groovy 2.4.6+ will display "eachFile" etc.Cheers,
-Pascal

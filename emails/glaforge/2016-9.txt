@@ -1,6 +1,0 @@
-Hi Raviteja,You can use plain if statements in those templates.GuillaumeOn Thu, Sep 29, 2016 at 4:34 PM, Raviteja Lokineni <
-raviteja.lokineni@gmail.com> wrote:-- 
-Guillaume Laforge
-Apache Groovy committer & PMC Vice-President
-Developer  Cloud PlatformBlog: 
-Social: @glaforge  / Google+

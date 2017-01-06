@@ -1,5 +1,0 @@
-I didn't backport the fix for the issue in question because it wasn't a
-trivial change, and seemed to be more of an enhancement than a bugfix. That
-being said, I don't feel too strongly about the changes not being in 2.4.X,
-so I'd be OK with backporting the changes if other committers are for it.On Fri, Jan 15, 2016 at 4:27 PM, CÃ©dric Champeau 
-wrote:

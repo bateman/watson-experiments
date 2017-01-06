@@ -1,8 +1,0 @@
-Hi Rahul,Sorry I didn't respond to this earlier; I've had limited access to my
-computer the past few days. I would like to offer this as a contribution to
-groovy-core, but not in its existing form - this annotation and
-transformation are basically just support for 'local' extensions, and would
-benefit from reusing the existing code that works with extension modules.
-In the meantime, if you'd like, I could create a separate repo for just
-this annotation + transformation and package and upload it to maven central.ShilOn Fri, Aug 28, 2015 at 1:17 AM, Rahul Somasunderam <
-rsomasunderam@transcendinsights.com> wrote:

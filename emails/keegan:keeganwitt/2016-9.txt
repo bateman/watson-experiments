@@ -1,6 +1,0 @@
-I started experimenting with launch4j, and have put that experiment in this
-repo:   I've uploaded
-binaries into same place I previous linked.  The first binaries I uploaded
-are in batWrapper.zip, and the new launch4j based binaries are in
-launch4j.zip if anyone wants to try them out.  At the moment, I only have
-binaries that call Java (i.e. not bundled with Java).-Keegan

@@ -1,4 +1,0 @@
-Jochen is right, Groovy compilation happens after stubgen and javac, hence
-it'll replace those previously generated classes.Why shouldn't javac compile the stubs?  Wouldn't javac need the classes so
-that it has something to compile against (since Java is statically
-compiled) so that circular compilation works?  GMaven worked this way also.-Keegan

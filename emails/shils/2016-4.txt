@@ -1,2 +1,0 @@
-Did a quick review of the tests and documentation, looks great! This is a
-feature I'll definitely be using upon its availability.

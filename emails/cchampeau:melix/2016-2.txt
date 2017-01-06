@@ -1,3 +1,0 @@
-You absolutely need to call the one that takes a Class as an argument. The
-String version is really for deep internal things, and can be resolved by
-the compiler, but it's already too late in an AST xform.2016-02-22 12:39 GMT+01:00 Anton Sarov :

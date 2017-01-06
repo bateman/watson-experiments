@@ -1,9 +1,0 @@
-Hi all,Lots of Groovy ecosystem fans are moving to Washington DC this week for the
-SpringOne2GX show, and just before taking my flight, I thought that would
-be a good idea to share the latest edition of your favorite Groovy column
-:-)If you're attending the conference, please come and talk with me and tell
-me you're reading Groovy Weekly :-)-- 
-Guillaume Laforge
-Apache Groovy committer & PMC member
-Product Ninja & Advocate at Restlet Blog: 
-Social: @glaforge  / Google+

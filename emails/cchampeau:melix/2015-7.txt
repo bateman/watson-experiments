@@ -1,4 +1,0 @@
-A closure keeps a reference to its owner/thisObject, which is in your
-case the script. The script is not serializable. If you dehydrate the
-closure (call closure.dehydrate()) it will not keep a reference to the
-script anymore and it should be serializable.2015-07-26 11:57 GMT+02:00 Jeff MAURY :

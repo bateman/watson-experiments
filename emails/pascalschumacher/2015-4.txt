@@ -1,2 +1,0 @@
-Hello everybody,the Groovy repository moved to Apache: It's now mirrored on github under Please send any pull requests to this repository.Thanks and kind regards,
-Pascal

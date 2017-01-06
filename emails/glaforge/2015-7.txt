@@ -1,7 +1,0 @@
-And did you also see the annotations on types?
-Wherever you have class names, basically, you'll be able to put annotations.
-Even for things like casts: def a = (@NotNull Foo)something-- 
-Guillaume Laforge
-Apache Groovy committer & PMC member
-Product Ninja & Advocate at Restlet Blog: 
-Social: @glaforge  / Google+

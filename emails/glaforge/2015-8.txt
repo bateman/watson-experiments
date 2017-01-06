@@ -1,2 +1,0 @@
-The Groovy compiler actually never generates warnings.
-Le 24 aoÃ»t 2015 12:30, "JamieEchlin"  a Ã©crit :

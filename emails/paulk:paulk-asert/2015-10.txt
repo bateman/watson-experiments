@@ -1,6 +1,0 @@
-I think pcollections or functional-java (via functional-groovy?) seem
-like the easiest paths to go. We should also decide whether to assist
-with static type checking we need the n-ary variants for things like
-Tuple, Predicate, Function etc. At some point we either need to adopt
-such generic interfaces or follow the Java8 direction.On Thu, Oct 15, 2015 at 8:59 PM, CÃ©dric Champeau
- wrote:

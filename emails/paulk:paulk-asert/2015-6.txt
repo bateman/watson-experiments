@@ -1,4 +1,0 @@
-Yes, inits/tails has cropped up numerous times in the past, e.g. 2008:Functional Java also has those methods - though returned in the reverse order.
-I prefer Scala's order, i.e. the original then the result of calling init/tail
-as many times as elements in the list, i.e. all the way to the empty list.Cheers, Paul.---
-This email has been checked for viruses by Avast antivirus software.

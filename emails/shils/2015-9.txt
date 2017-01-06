@@ -1,6 +1,0 @@
-The bytecode for x[n] is: ILOAD 1
-    INVOKESTATIC org/codehaus/groovy/runtime/DefaultGroovyMethods.getAt
-(Ljava/util/List;I)Ljava/lang/Object;The implementation of DGM.getAt(List, int) returns null if the given index
-is >= the size of the list, so this makes sense. Seems like a bug in the
-DGM implementation more than @CompileStatic.On Tue, Sep 29, 2015 at 5:17 PM, SÃ¸ren Berg Glasius 
-wrote:

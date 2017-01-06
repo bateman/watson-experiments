@@ -1,4 +1,0 @@
-Hello everybody,any opinions on how the Json LAX parser should handle an invalid number?a) fail parsing
-b) parse it as string
-c) fail on accessSee:  and 
- for details.Thanks to John for all the work he put into this.-Pascal

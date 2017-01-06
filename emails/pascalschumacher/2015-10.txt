@@ -1,2 +1,0 @@
-Hi Henrik,the groovy-eclipse snapshoots builds support Groovy 2.4.3. I use them at 
-work.-PascalAm 29.10.2015 um 04:46 schrieb Henrik Martin:

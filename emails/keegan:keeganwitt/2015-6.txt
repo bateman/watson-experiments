@@ -1,3 +1,0 @@
-Yes.  Any time you have a property name starting with a single lower case
-letter, followed by an uppercase, it will not capitalize the first letter
-in the getter & setter.-Keegan

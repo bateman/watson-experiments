@@ -1,4 +1,0 @@
-Have you looked at VariableAccessReplacer and its related classes
-in org.codehaus.groovy.transform.tailrec? They might not fit your use case
-as is, but you could probably modify them to do what you want.On Wed, Jul 29, 2015 at 4:40 AM, Wolfgang Pedot 
-wrote:

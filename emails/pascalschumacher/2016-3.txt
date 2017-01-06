@@ -1,3 +1,0 @@
-Hi Jerry,I would start by searching github: If that does not yield satisfying results I would search for a java api 
-and see how I can improve upon it when using Groovy.Cheers,
-PascalAm 07.03.2016 um 16:22 schrieb Gerald Wiltse:

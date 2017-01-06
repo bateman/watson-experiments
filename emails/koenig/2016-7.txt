@@ -1,4 +1,0 @@
-We can only make breaking changes where the old behavior was just wrong.
-The proposal would have been ok as well if we had started with it. But given what we have now, it is a "won't fix".Cheers
-Dierk
-sent from: mobile
