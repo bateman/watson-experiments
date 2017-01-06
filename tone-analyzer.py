@@ -20,7 +20,7 @@ def main():
     cnx = db_utils.connect()
     base_dir = './emails'
     print ('building email corpus')
-    #db_utils.build_corpus(cnx, committers, base_dir)
+    db_utils.build_corpus(cnx, committers, base_dir)
     db_utils.disconnect(cnx)
 
     results_dir = './results'
