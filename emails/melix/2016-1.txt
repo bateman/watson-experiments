@@ -1,0 +1,4 @@
+Your benchmark is wrong, because the caller is not statically compiled.
+What you have statically compiled is the `Test` class, but the caller is
+not. So when you do `t.setMember(..)`, the call is dynamic. It's the caller
+that you have to statically compile (or both, ideally).2016-01-21 16:39 GMT+01:00 Marshall, Simon :

@@ -1,0 +1,4 @@
+I haven't dived in deeply, but adding @CompileStatic would pick up
+certain kinds of errors at compilation time that would otherwise
+result in a runtime error, e.g. a member such as:
+int BAR = Object.propertyDoesNotExist

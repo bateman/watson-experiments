@@ -1,0 +1,11 @@
+That's a ridiculously ancient version.  I doubt Eclipse is coded to support
+the old goals that were in the 1.0 plugin (which is why you're seeing the
+errors you're seeing).  I'm not familiar enough with Eclipse's codebase to
+say why Eclipse is picking that version.  Upstream archetype-catalog.xml
+has a much more recent version.  What I'd do is use Maven from the
+commandline to use the archetype then import that into Eclipse.  Or just
+don't use the archetype (it's a pretty simple setup anyway -- all it's
+doing is creating a src/main/groovy and src/test/groovy, and plopping in
+the GMaven XML into a POM).  That is, assuming you really want to use
+GMaven.  It's not maintained anymore and I suggest consideringanother option.-KeeganOn Mon, Aug 31, 2015 at 11:22 AM, Richard Heintze 
+wrote:

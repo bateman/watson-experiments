@@ -1,0 +1,5 @@
+Hi Guillermo,Yes, I think it was a bug.  The call method taking a closure was not
+passing the created statement off to the configureStatement closure.  This
+should be fixed by  and the fix
+should be in 2.4.7.JohnOn Thu, Mar 10, 2016 at 1:38 PM, Guillermo Roman <
+guillermo.roman.dearagon@gmail.com> wrote:

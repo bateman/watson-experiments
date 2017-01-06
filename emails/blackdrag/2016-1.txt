@@ -1,0 +1,9 @@
+you know the matter with those things is actually quite simple. If a 
+Java solution takes y time, and a C solution x time you have y=t1+x+t2 
+as where they meet. What t1 and t2 are you ask? That is the code 
+converting call patterns, type, the actual method call and so on. 
+Considering t1 and t2 constants, they can be still very dominating for 
+small x. Thus you can the advantage only for big x. In other words, if 
+want to multiplicate two matrix, then it might not be wort.... if you do 
+a hundred, it can turn out different... and on a cuda architecture, you 
+will want to have many many operations done in parallel as wellbye blackdrag

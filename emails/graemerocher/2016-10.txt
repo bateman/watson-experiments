@@ -1,0 +1,5 @@
+one thing to note. I would assume if we allow JsonOutput.unescaped it
+would the convert method would have to return Object? Currently the
+JsonUnescaped type doesn't implement CharSequenceIf that is the case it may also be interesting to support return types
+of Writable since.Cheers-- 
+Graeme Rocher

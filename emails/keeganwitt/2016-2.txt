@@ -1,0 +1,2 @@
+The Windows installer for Groovy 2.4.6 is now available:installer/view.  Now also includes Grengine
+.-Keegan

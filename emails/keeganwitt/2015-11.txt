@@ -1,0 +1,4 @@
+Ah.  Yes, I'm reproducing your issue now.  Honestly, I don't know enough
+about Grape to answer this.  Groovysh and GroovyConsole both use
+GroovyShell underneath and I don't see that they do any customization of
+classloading/classpaths.  At the moment, I'm stumped :(-Keegan

@@ -1,0 +1,2 @@
+Hi Paco,support for final local variables will be available in the upcoming 2.5 
+version.-PascalAm 21.05.2015 um 20:25 schrieb Paco Zarate:

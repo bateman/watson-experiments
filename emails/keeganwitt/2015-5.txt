@@ -1,0 +1,7 @@
+Hi Steve,   1. If you want type checking without static compilation, yes.
+   2. @groovy.transform.CompileDynamic (despite its name, my understanding
+   is it disables type checking, not static compilation).
+   3. Yes, CompileStatic also enables type checking.  There is no need to
+   include both transformations (and I seem to recall including both broke
+   something for me at one point because the transformation was being applied
+   twice -- though I could be recalling incorrectly).-Keegan

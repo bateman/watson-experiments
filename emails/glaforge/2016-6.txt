@@ -1,0 +1,3 @@
+Perhaps a custom type checker extension could be fed with the jdbc
+metadata...
+Le 22 juin 2016 7:41 PM, "Shil Sinha"  a Ã©crit :

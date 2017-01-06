@@ -1,0 +1,7 @@
+Hi acefael,Probably would be good to open a JIRA for this, definitely looks like an
+issue with the block of code you identified.  I do believe the general
+intent of the Sql class is to be thread safe.  As Pascal pointed out, there
+might be other issues if calls are made to methods that cause a cached
+connection.  But at a quick glance the caching of the parsed named
+parameter queries looks separate from connection and statement caching.Are you calling sql.close() from any of the closures?  Just wondering since
+close() clears both maps.John[1]

@@ -1,0 +1,15 @@
+Hi everyone,As you may know, Groovy has been accepted as an incubating project in 
+the Apache Software Foundation [1]. At the same time, Codehaus is going 
+to shutdown soon [2]. As a consequence:     * Our JIRA project is going to be migrated on the Apache JIRA 
+instance next saturday (April 4th)
+     * the Codehaus mailing lists are decommissioned in favor of the new 
+mailing lists [3]There will not be any automatic registration to the new mailing lists. 
+*You need to register* to those following the instructions at [3]. 
+Basically you will need to register to:     * users@groovy.incubator.apache.org for general help about Groovy
+     * dev@groovy.incubator.apache.org for discussions around the 
+development of Groovy itself, or if you want to follow the incubation 
+processIn short, as of today, please start using the new mailing lists.Best regards,[1] 
+[2] 
+[3] -- 
+CÃ©dric Champeau
+Groovy language developer

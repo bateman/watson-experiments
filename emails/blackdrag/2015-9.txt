@@ -1,0 +1,41 @@
+This actually highlights a general problem with static compilation and 
+extension methods.Extension methods are not part of the class in the Java sense. Thus 
+there is no virtual method call. This means that if the compiler assumes 
+the wrong type, it will call the wrong method. In Java everything is 
+fine as long as the "wrongly" assumed type is a super type and defines 
+the method. Example:class Foo {
+   int foo(){1}
+}
+class Bar extends Foo {
+   int foo(){2}
+}
+def method(Foo f) {
+   return f.foo()
+}
+assert method(new Foo()) == 1
+assert method(new Bar()) == 2A static compiler will select Foo#foo() for the call, but since the 
+method call is done virtual, you still end up doing Bar#foo() if f is 
+Bar. But with extension methods:class Foo{}
+class ExtensionMethodsForFoo { // placed so compiler knows this
+   static int foo(Foo f){1}
+}
+class Bar extends Foo{
+   int foo(){2}
+}
+assert method(new Foo()) == 1
+assert method(new Bar()) == 1Again the compiler will only see Foo#foo, because he cannot know better. 
+But since the call cannot be virtual, there is no way of calling Bar#foo 
+this way. It would also be the same if Bar#foo is defined as extension 
+method as well.In general: inheritance with extension methods does not work properly 
+for static compiled Groovy. It cannot imho.For the case here, it might be a workaround to let the withDefault 
+method not return List (which will let the compiler then later select 
+List#getAt from DGM), but to use the specific type (ListWithDefault or 
+something). Then the compiler can select the proper method through flow 
+typing. Of course, as soon as you moves parts of the code in another 
+method, you may end up with the same problem. So it is not a really 
+refactoring-safe solution. But better than nothing I guess.Anyway... just wanted to confirm you guys why this is no static 
+compilation bug.Of course you could think about doing double dispatch in the DGM method, 
+but either you do dynamic calls from there and loose the advantage of 
+static compilation, orbye blackdragAm 29.09.2015 23:58, schrieb Shil Sinha:-- 
+Jochen "blackdrag" Theodorou
+blog:

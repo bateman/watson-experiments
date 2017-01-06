@@ -1,0 +1,31 @@
+It isn't limited to scripts. Scripts are the main use case for @Grab
+but it will work with normal classes too. I am not sure non-script usage
+changes the risk profile. System.setProperty can be used in both scripts
+and classes as well.Where to perform the System.setProperty raises some interesting design
+decisions. In the initial PR I placed that within Grap.grab. This has
+the advantage that with a security manager in place you would have one
+spot to toggle whether setting those properties would be allowed. The
+disadvantage is that you couldn't easily discriminate between different
+groups of script/class, e.g. system scripts vs user-defined ones.
+Grape.grab is also called during compilation - which also sets the
+system properties - as would be required to actually compile the script.
+This does though need to be considered from a security point of view
+and I wasn't really considering the full impact of that previously, so
+I'm glad you raised the points.So it's easy enough to move setting the system properties into the
+class/script initializer. If done naively, there would be a change in
+behavior to above - where currently the system properties wouldn't be
+set if the global grape "kill-switch", 'groovy.grape.enable' was set
+to false. So, we'd need to wrap the property setting inside an
+appropriate check.That just leaves the question of whether to run setting those
+properties within the compiler or not. Obviously, such settings
+might be needed to enable the compilation process to succeed.
+If groovy was more like java with more obviously distinct compile
+and run steps, it would probably make sense to tease apart those
+concerns but since groovy scripts are often run in an all-in-one
+compile and then run process, there would certainly be a case for
+not forcing the user to enter such information twice. However,
+given the security concerns in question here, I am inclined to
+require that info twice for now and make the documentation clear
+on that aspect. Later, if we can find a safe way, we could streamline
+to remove the need for the duplicate info.I'll create a new PR in the coming days.Cheers, Paul.This email message and any attachments are for the sole use of the intended recipient(s). Any unauthorized review, use, disclosure or distribution is prohibited. If you are not the intended recipient, please contact the sender by reply email and destroy all copies of the original message and any attachments.---
+This email has been checked for viruses by Avast antivirus software.

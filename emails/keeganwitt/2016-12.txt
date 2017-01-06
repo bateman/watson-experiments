@@ -1,0 +1,4 @@
+It would be nice to be able to offer an Alpine based image.  There's quite
+a size difference.  The non-Alpine image is 388.4 MB while the Alpine image
+is 189 MB, less than 1/2 the size.Do you think we should mount ~/.groovy as a volume?  Might be useful for
+~/.groovy/grapes in particular.

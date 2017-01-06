@@ -1,0 +1,4 @@
+We have a method in DGM:meaning Object itself provides a getAt method that uses getProperty - 
+well, actually it is equal to self.$property. Which of course means if 
+you add a getAt(Object) method and call this with a String or GString, 
+we still call the above method. Which also explains your problem ;)bye Jochen

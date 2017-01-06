@@ -1,0 +1,7 @@
+Great, yeah that would be a big help, since efficiency over the wire
+for JSON services is a big deal and the unicode escaping doesn't help
+there.Also, can we consider  as an
+improvement? Again it makes using StreamingJsonBuilder more efficient
+and maintainable.ThanksOn Fri, Sep 23, 2016 at 1:11 AM, John Wagenleitner
+ wrote:-- 
+Graeme Rocher

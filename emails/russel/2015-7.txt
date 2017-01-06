@@ -1,0 +1,12 @@
+I am not sure how the Windows installer builds and tests, does it build
+the native installer for Groovy?The native launcher repository last ran tests using Groovy 1.7.4: the
+Groovy version is effectively a parameter. If Joachin tests with the
+version of Groovy being packaged and it works, that is great news.I need to switch from using Bamboo as the test framework to using
+something else, Travis, CodeShip,â€¦? (and put a test status marker in
+the README.)Gant is an ex thing. It's only user is GINT. Though IntelliJ IDEA still
+ships support for it.-- 
+Russel.
+=============================================================================
+Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
+41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
+London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder

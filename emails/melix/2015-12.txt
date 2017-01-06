@@ -1,0 +1,4 @@
+You are actually talking about the second error, but it's a direct
+consequence of flow typing (that Scala doesn't have). And if we didn't have
+that, no doubt that even more frustration would come (look at the history
+of type checking bugs for type inference of literals to get an idea).2015-12-02 16:23 GMT+01:00 Dinko SrkoÄ :

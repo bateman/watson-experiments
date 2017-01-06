@@ -1,0 +1,4 @@
+I agree with what Jason said. I'm still up for `tap`. We could use
+`with(true) { ... }`, but I also dislike "with(returnThis: true) {... }"
+because it's not type safe.2016-11-09 14:56 GMT+01:00 Winnebeck, Jason 
+:

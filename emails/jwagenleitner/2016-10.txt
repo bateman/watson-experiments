@@ -1,0 +1,7 @@
+I had aimed for making it as flexible as possible and purposefully had it
+not participate in further processing to avoid surprises and be able to
+output JSON that otherwise wouldn't be possible due to the way the
+generator was already configured (nulls or being able to write out a number
+such as 9.3e7).I like your suggestion and think the flexibility could still be
+accomplished using JsonOutput.unescaped; and since 2.5 isn't out yet
+there's still time to refine how it works.I also would like to hear what others think.John

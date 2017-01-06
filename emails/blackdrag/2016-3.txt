@@ -1,0 +1,6 @@
+This require support through the JVM... and actually Java8 has that... 
+But I think we do not support that yet. I am unhappy about the semantics 
+of static methods in general in Java and that we copied most of it in 
+Groovy... extending that to interface is for me no good decision... but 
+well...I guess it is up to you. I know of nothing in that area to make this 
+less painfulbye Jochen

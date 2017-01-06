@@ -1,0 +1,9 @@
+[...][...]This is actually not so easy to explain, since this is a side-effect of 
+the way the grammar for the parser is written... and they are 
+potentially bugs.if you have foo {}, then this is seen as a complete method call, the 
+parser simply does not expect further arguments after the {} if you wrap 
+the whole thing in parens, you actually have a different rule applying, 
+which explains why it works there. But that is actually not precise 
+enough. we have also a different rule for foo {} and foo 1, {}. So imho 
+the parser simply applies the wrong rule first and the problems you see 
+are a result of priorities... or missing lookaheadbye Jochen

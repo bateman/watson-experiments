@@ -1,0 +1,4 @@
+Hi Carl,this exception could be cause by java security setting.Groovy 1.8.6 is a bit old. There were a several fixes and enhancements 
+to grab between 1.8 and 2.4. Also the Apache Ivy version - which is use 
+by grab - was updated multiple times between 1.8 and 2.4.Cheers,
+PascalAm 20.02.2016 um 16:47 schrieb Carl Marcum:

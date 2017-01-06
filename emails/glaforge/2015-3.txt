@@ -1,0 +1,6 @@
+Hi Merlin,You can find all the versions of the Windows installer on Bintray:Creating that installer is still a manual process, for various reasons, so
+it's not automated and released as we release the normal Groovy
+distribution.Guillaume2015-03-31 12:59 GMT+02:00 Merlin Beedell :-- 
+Guillaume Laforge
+Groovy Project ManagerBlog: 
+Social: @glaforge  / Google+

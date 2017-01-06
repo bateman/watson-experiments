@@ -1,0 +1,3 @@
+Hi Anto,did you try again?I just tried to access and it is available now. I guess if there is no firewall/proxy problem 
+on your side it was just a temporary problem of plugins.gradle.org.Cheers,
+PascalAm 10.08.2015 um 15:06 schrieb Owen Rubel:

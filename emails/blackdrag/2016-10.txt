@@ -1,0 +1,8 @@
+[...]exactly. The same applies to the usage of categories and to methods 
+added to the meta class. The problem is reduced if we delegate to the 
+implementation of an interface and all the important logic is based on 
+the interface type. Because @Delegate per default implements the 
+interfaces of the delegates.It is not an either-or. You can do both, causing less load for 
+methodMissing and faster dispatch.Presuming the availability and usage of certain extension methods is 
+imho ok for the static compiler, but not for dynamic Groovy - not if you 
+expect a runtime added extension method to have influencebye Jochen

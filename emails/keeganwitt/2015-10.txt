@@ -1,0 +1,4 @@
+Trying to wrap up 7465 this week.  Got one more question: What do you think
+of making *getText* and *getBytes* take an arg of whether to strip the BOM
+(if found)?-KeeganOn Tue, Jul 7, 2015 at 2:44 PM, Guillaume Laforge 
+wrote:

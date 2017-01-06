@@ -1,0 +1,4 @@
+Could also put the text you were using in the asserts into a List instead
+and after the while loop assert list isEmpty().
+On Jan 11, 2016 5:28 PM, "Edinson E. PadrÃ³n Urdaneta" <
+edinson.padron.urdaneta@gmail.com> wrote:

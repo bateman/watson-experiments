@@ -1,0 +1,2 @@
+I haven't used Lombok, but wouldn't you just add Lombok as a dependency in
+your POM?  Have you tried that already?-Keegan
