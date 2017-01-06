@@ -3,6 +3,7 @@ import csv
 import glob
 import os
 import time
+import collections
 
 from watson_developer_cloud import ToneAnalyzerV3
 
@@ -34,11 +35,15 @@ def main():
             # social_tones = {'Openness', 'Conscientiousness', 'Extraversion', 'Agreeableness', 'Emotional Range'}
             wr.writerow(header)
 
+            rows = dict()
             lookup = '{0}/{1}/*.txt'.format(base_dir, dev['id'])
             rows = dict()
             for email in glob.glob(lookup):
                 y_m, _ = email.split('.txt', 1)
-                y_m = y_m.split(base_dir + os.sep)
+                _, y_m = y_m.split(base_dir + os.sep + dev['id'] + os.sep)
+                y, m = y_m.split('-')
+                if len(m) == 1:
+                    y_m = '{0}-0{1}'.format(y, m)
                 with open(email, 'rb') as f:
                     content = f.read()
                     js = tone_analyze(content)
