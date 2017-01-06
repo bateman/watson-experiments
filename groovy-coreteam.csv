@@ -1,11 +1,13 @@
-nickname;name;email
-cchampeau:melix;Cedric Champeau:Cédric Champeau;cchampeau@apache.org:cedric.champeau@gmail.com 
-paulk:paulk-asert;Paul King;paulk@asert.com.au
-glaforge;Guillaume Laforge;glaforge@gmail.com
-pascalschumacher;Pascal Schumacher;pascalschumacher@gmx.net
-blackdrag;Jochen Theodorou;blackdrag@gmx.org
-aalmiray;Andres Almiray;aalmiray@gmail.com
-koenig;Dierk Koenig;dierk.koenig@canoo.com
-russel;Russel Winder;russel@winder.org.uk
-keegan:keeganwitt;Keegan Witt;keeganwitt@gmail.com
-shils;Shil Sinha;shil.sinha@gmail.com
+nickname;name;email;github id
+melix;Cedric Champeau;cchampeau@apache.org:cedric.champeau@gmail.com;316357
+paulk-asert;Paul King;paulk@asert.com.au;242686
+glaforge;Guillaume Laforge;glaforge@gmail.com;47907
+PascalSchumacher;Pascal Schumacher;pascalschumacher@gmx.net;961372
+blackdrag;Jochen Theodorou;blackdrag@gmx.org;470278
+aalmiray;Andres Almiray;aalmiray@gmail.com;13969
+Dierk;Dierk Koenig;dierk.koenig@canoo.com;51843
+russel;Russel Winder;russel@winder.org.uk;24420
+keeganwitt;Keegan Witt;keeganwitt@gmail.com;139531
+shils;Shil Sinha;shil.sinha@gmail.com;3650054
+graemerocher;Graeme Rocher;graeme.rocher@gmail.com;6212
+jwagenleitner;John Wagenleitner;john.wagenleitner@gmail.com;53495
