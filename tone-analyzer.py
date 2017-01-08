@@ -16,19 +16,21 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main():
-    committers = file_utils.load_emails('./groovy-coreteam.csv')
-    cnx = db_utils.connect()
-    base_dir = './emails'
-    print ('building email corpus')
-    db_utils.build_corpus(cnx, committers, base_dir)
-    db_utils.disconnect(cnx)
+    committers = file_utils.load_emails(os.curdir + os.sep + '/groovy-coreteam.csv')
+    base_dir = os.curdir + os.sep + 'emails'
+    if not os.path.exists(base_dir):
+        cnx = db_utils.connect()
+        print ('Arranging developers\' emails by month')
+        db_utils.process_raw_emails(cnx, committers, base_dir)
+        db_utils.disconnect(cnx)
 
-    results_dir = './results'
+    results_dir = os.curdir + os.sep + 'results'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
-    print ('analyzing tone')
+    print ('Building agreeableness time series from \'{0}\' (everything in \'{1}\' will be overwritten)'.
+           format(base_dir, results_dir))
     for dev in committers:
-        file_name = '{0}/{1}.csv'.format(results_dir, dev['id'])
+        file_name = '{0}{1}{2}.csv'.format(results_dir, os.sep, dev['id'])
         with open(file_name, 'wb') as results:
             wr = csv.writer(results, delimiter=';')
             header = ('year_month', 'agreeableness')
@@ -36,7 +38,7 @@ def main():
             wr.writerow(header)
 
             rows = dict()
-            lookup = '{0}/{1}/*.txt'.format(base_dir, dev['id'])
+            lookup = '{0}{1}{2}{1}*.txt'.format(base_dir, os.sep, dev['id'])
             rows = dict()
             for email in glob.glob(lookup):
                 y_m, _ = email.split('.txt', 1)
