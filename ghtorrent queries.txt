@@ -1,0 +1,33 @@
+committer di groovy in ghtorrent
+
+select distinct committer_id, login, email from commits inner join users on committer_id = users.id where project_id = 29167693;                                                                           
++--------------+------------------+-----------------------------+                                        
+| committer_id | login            | email                       |                                        
++--------------+------------------+-----------------------------+                                        
+|       961372 | PascalSchumacher | pascalschumacher@gmx.net    |                                        
+|       242686 | paulk-asert      | paulk@asert.com.au          |                                        
+|      3650054 | shils            | shil.sinha@gmail.com        |                                        
+|        53495 | jwagenleitner    | john.wagenleitner@gmail.com |                                        
+|       139531 | keeganwitt       | keeganwitt@gmail.com        |                                      
+|         6212 | graemerocher     | graeme.rocher@gmail.com     |                                        
+|        55132 | fpavageau        | frank.pavageau@gmail.com    |                                        
++--------------+------------------+-----------------------------+   
+
+
+select * from projects 
+    where name = 'mesos' and url ="https://api.github.com/repos/mesos/mesos";
+
+select id from projects where name = 'groovy' and url ="https://api.github.com/repos/apache/groovy";
+project id 29167693
+select count(*) from pull_requests where base_repo_id = 29167693;
+
+select distinct action from pull_request_history;
++-------------+
+| action      |
++-------------+
+| opened      |
+| closed      |
+| merged      |
+| reopened    |
+| synchronize |
++-------------+
