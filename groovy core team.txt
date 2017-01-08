@@ -27,3 +27,11 @@ Cédric Champeau melix
 Pascal Schumacher PascalSchumacher
 Paul King paulk-asert
 Tim Yates timyates 
+
+
+jdillon;Jason Dillon;?
+timyates;Tim Yates;?
+rvs;Roman Shaposhnik;roman@shaposhnik.org:rvs@apache.org
+abayer;Andrew Bayer;andrew.bayer@gmail.com
+bdelacretaz;Bertrand Delacretaz;bdelacretaz@apache.org
+jim;Jim Jagielski;jim@jagunet.com
