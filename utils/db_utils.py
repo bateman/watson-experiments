@@ -18,7 +18,7 @@ def disconnect(cnx):
 
 # first email march 2015
 # last email december 2016
-def build_corpus(cnx, committers, base_dir):
+def process_raw_emails(cnx, committers, base_dir):
     for dev in committers:
         id = dev['id']
         out_dir = '{0}/{1}'.format(base_dir, id)
