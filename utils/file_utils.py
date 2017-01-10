@@ -24,7 +24,7 @@ def save_corpus(corpus, filename, delim=';'):
     _file.close()
 
 
-def load_emails(filename):
+def load_core_team_members(filename):
     committers = list()
     with open(filename, "rb") as _file:
         reader = csv.reader(_file, delimiter=";")
