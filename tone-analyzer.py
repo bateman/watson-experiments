@@ -21,14 +21,14 @@ def main():
     base_dir = os.curdir + os.sep + 'emails'
     if not os.path.exists(base_dir):
         cnx = db_utils.connect()
-        print ('Arranging developers\' emails by month')
+        print ('Retrieving developers\' emails from the db')
         db_utils.process_raw_emails(cnx, committers, base_dir)
         db_utils.disconnect(cnx)
 
     results_dir = os.curdir + os.sep + 'results'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
-    print ('Building agreeableness time series from \'{0}\' (everything in \'{1}\' will be overwritten)'.
+    print ('Computing developers\' agreeableness scores from \'{0}\' (everything in \'{1}\' will be overwritten)'.
            format(base_dir, results_dir))
     for dev in committers:
         file_name = '{0}{1}{2}.csv'.format(results_dir, os.sep, dev['id'])
