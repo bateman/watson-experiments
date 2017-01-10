@@ -1,4 +1,4 @@
-I did something like that a while ago for the Gaelyk framework:(based on the Google App Engine imagine manipulation library)Guillaume-- 
+Happy to have you onboard too :-)-- 
 Guillaume Laforge
 Apache Groovy committer & PMC member
 Product Ninja & Advocate at Restlet Blog: 

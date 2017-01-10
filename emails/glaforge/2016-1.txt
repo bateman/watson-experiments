@@ -1,7 +1,14 @@
-Not 100% unmaintained though, as you can see in the commits, Andy
-Clement, for instance, did a few changes recently, to accomodate
-GMavenPlus: Guillaume-- 
+I wouldn't include any comment on a slow down.
+I'd see a comment like that on any OSS project page, I'd shy away from
+using it.
+If you look at the commit logs, there are very regular commits.
+We just don't work on huge / big news-worthy features right now, but it's
+still significant effort towards bug fixing and stabilization, which is
+also very important.
+So saying the project slowed down (or that it lost some full-time
+committers), isn't a good idea IMHO.
+I've never seen that on any OSS project page anywhere.Guillaume-- 
 Guillaume Laforge
 Apache Groovy committer & PMC member
-Product Ninja & Advocate at RestletBlog: 
-Social: @glaforge / Google+
+Product Ninja & Advocate at Restlet Blog: 
+Social: @glaforge  / Google+

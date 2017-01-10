@@ -1,3 +1,2 @@
-Yes.  Any time you have a property name starting with a single lower case
-letter, followed by an uppercase, it will not capitalize the first letter
-in the getter & setter.-Keegan
+1"findAllIn" initially came to mind, but I think "findAll" is more
+consistent with the other methods that take a collection as an argument.-Keegan

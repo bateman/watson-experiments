@@ -1,4 +1,4 @@
-Sounds about right.-- 
+It's on purpose that it should be close to the Elvis operator :-)-- 
 Guillaume Laforge
 Apache Groovy committer & PMC Vice-President
 Developer  Cloud PlatformBlog: 

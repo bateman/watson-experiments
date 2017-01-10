@@ -1,4 +1,6 @@
-Hello everybody,any opinions on how the Json LAX parser should handle an invalid number?a) fail parsing
-b) parse it as string
-c) fail on accessSee:  and 
- for details.Thanks to John for all the work he put into this.-Pascal
+Hello everybody,since a few days all builds on  fail, but the 
+build still passes locally and on 
+ so it seems 
+like the server has some problem. It would be nice if somebody with 
+access rights could have a look.Thanks,
+Pascal

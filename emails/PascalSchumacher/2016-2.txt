@@ -1,4 +1,40 @@
-Hi Carl,this exception could be cause by java security setting.Groovy 1.8.6 is a bit old. There were a several fixes and enhancements 
-to grab between 1.8 and 2.4. Also the Apache Ivy version - which is use 
-by grab - was updated multiple times between 1.8 and 2.4.Cheers,
-PascalAm 20.02.2016 um 16:47 schrieb Carl Marcum:
+Hi Jesper,
+ 
+sorry, but I do not know if there are reasons why the current grammar does not allow "--1"?
+ 
+@Paul, Guillaume... I guess you can shed some light on this?
+ 
+-Pascal
+ Gesendet: Montag, 29. Februar 2016 um 08:55 Uhr
+Von: "Jesper Steen Møller" <jesper@selskabet.org>
+An: dev@groovy.apache.org
+Betreff: Re: More Antlr4-based Groovy parser status updateHi Pascal,
+ 
+Thank you, I’d missed that one.
+ 
+Any thought on the validity of “- -1”?
+ 
+-Jesper
+  Hi Jesper,thanks for the update. :) Nice to hear you are progressing.Concerning the ASTBuilder to Java conversion, there is a pull request with this at the old repo Cheers,
+PascalAm 28.02.2016 um 12:55 schrieb Jesper Steen Møller:
+Hi Groovy-Dev
+ 
+Here’s another update on the progress on the Antlr4 parser, as maintained on  (in the antlr4 branch).
+To play with it, try:
+ $ git clone -b antlr4 
+$ cd groovy
+$ gradle -PuseAntlr4=true console 
+I’ve fixed a number of issues:Support method pointer operator
+Attributes/method/property names as strings/gstrings
+Real support for unary plus and minus (mimics old parser’s behaviour)
+Compilation units not ending with semicolon or newline
+Slashy strings could span lines, confusing division statements and commentsI can now explore the new grammar and AST building using the Console, which is fun, but it’s very easy to find unsupported constructs. Mapping out the full Groovy grammar from the documentation alone is quite a task. Just today, I discovered lacking support for ‘assert’ and for ’super’-calls. The smaller issues currently are:assert
+super()
+Full Unicode letter support  for identifiers
+Support identifiers as property names and map literal entry names 
+The bigger issue is with converting the ASTBuilder to pure Java, a task I havn’t started yet. Actually, this poses a different question for AST generation: Whether to switch from tree-walking the parse tree (so whole tree must be kept in memory), to the listener-based approach, where the AST is built mostly bottom-up, ensuring smaller memory footprint.
+ 
+So you can help me with a couple of answers:Memory: Is this an issue I should be focusing on — and is there a test to baseline against?
+I’ve discovered a small issue with unary syntax. Currently, nested unary expressions are not supported without parenthesis: Try e.g. - -1 or + -1. Is this intentional, or just an artifact of the precedence-refactored Java grammar? 
+-Jesper
+ 

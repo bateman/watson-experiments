@@ -1,10 +1,3 @@
-in the first case you are accessing a local variable, which is done 
-without bothering with owner and delegate of the Closure instance. In 
-the second case you are going through these to find the meaning of the 
-magicValue. But since you use rehydrate to set owner and delegate to 
-null, you will end up in an error.  Why do you do rehydrate at all? 
-Maybe in your bigger code there is a need for this I won't see here, but 
-in what I see I obviously fail to see the need. If you have to use it, 
-then of course you will have to set owner and/or delegate, or else you 
-won't be able to sue the standard mechanisms to access the binding from 
-the Closure instancebye Jochen
+you cannot add statement as an alternative to expression if a expression 
+is also a statement. If any statement should be also an expression, then 
+statement and expression have to be mergedprobably, yesbye Jochen

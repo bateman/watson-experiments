@@ -1,0 +1,8 @@
+I just noticed that Groovy 1.8.9 has to be installed in order to build
+Groovy master.Along with Groovies 2.0.8, 2.1.9, 2.2.2, 2.3.10, 2.3.11, and 2.4.4.Someone, somewhere is aving a larf. Oh it's Java. Dependency management
+and backward compatibility have a lot to answer for.-- 
+Russel.
+=============================================================================
+Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
+41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
+London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder

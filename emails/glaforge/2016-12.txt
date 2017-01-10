@@ -1,0 +1,11 @@
+Hi Marcin,Some modules have used the groovyx.* namespace in the past.
+It's somewhat semi-standard, in the sense that it's already in use, at
+least.
+It's not dependent upon Apache or the defunct Codehaus foundation, and
+there's no constraint from Sonatype on those.
+If using groovyx, it'd be good to continue using some kind of consensual
+sub-namespace, like groovyx.net.* for network related modules.Guillaume-- 
+Guillaume Laforge
+Apache Groovy committer & PMC Vice-President
+Developer  Cloud PlatformBlog: 
+Social: @glaforge  / Google+

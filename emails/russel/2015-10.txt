@@ -1,13 +1,27 @@
-The annual ACCU conference is being held in Bristol, UK for 2016. The
-call for sessions is currently open, to close 2015-11-13 (yes, it is a
-Friday :-)Although ACCU originates from a C and C++ background, and there is a
-strong C++ flavour still, it has over the years got solid Java, Python,
-C#, Ruby, Lisp, agile processes, and wider topics in the programme: it
-is fundamentally about professional quality programming and techniques.
-There have even been sessions on Groovy, Java, Scala, Kotlin, Ceylon,
-Clojure,â€¦ in past years!If anyone in the JVM-related ecosphere would like to submit a session
-or two, I think it would be good to retain having strong content in
-this conference, and years to come.The call for sessions is atl_for_sessions-- 
+[â€¦]The big point is that Apache has a bare repository whilst GitHub (and
+BitBucket) surround this with extra technology for handling changesets
+that is now seen as integral to good community. One of the reasons
+behind the decline of Codehaus was exactly that in shifting from
+Subversion to Git it assumed it need only support the repository and
+failed to realize that in the shift from CVCS to DVCS you have to
+change your view on supporting the community. With CVCS the repository
+is all there is. With DVCS the repository is just a fraction of the
+technological support the community associated with that project needs.
+GitHub provides a lot of that support and it revolves around public
+pull request management and review. Â I have no experience of GitLab, but in other places people have said
+they are using it in preference to a private GitHub instance, because
+it is free to use. They report that it isn't quite as nice as a private
+GitHub instance, but it is nonetheless very usable.As I mentioned in my reply to Jim, an alternative is to set up Gerrit
+around the Apache repositories and to not use GitHub for pull requests,
+just for repository distribution.
+Â As an interim measure, till Apache puts some more DVCS support
+technology in place, I think this would be a good thing, as I already
+said in my reponse to Jim.No need for this worry about primary: the Apache repository is the
+primary mainline because it defines the state of the project. GitHub is
+a secondary mainline since it is where the work happens, but it is not
+part of the definition of the state until it is reflected in the Apache
+repository. There is no doubt here, just a change in workflow that
+allows GitHub pull request management to be used to its full.-- 
 Russel.
 =============================================================================
 Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net

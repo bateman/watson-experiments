@@ -1,0 +1,4 @@
+Hi Jochen,as far as I know it's not possible. The only way to rerun a build on 
+travis is to push to the pull request (easiest way: "commit --amend", 
+"push -f").Cheers,
+PascalAm 30.06.2016 um 22:15 schrieb Jochen Theodorou:

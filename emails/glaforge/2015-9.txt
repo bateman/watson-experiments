@@ -1,8 +1,5 @@
-Hi all,Lots of Groovy ecosystem fans are moving to Washington DC this week for the
-SpringOne2GX show, and just before taking my flight, I thought that would
-be a good idea to share the latest edition of your favorite Groovy column
-:-)If you're attending the conference, please come and talk with me and tell
-me you're reading Groovy Weekly :-)-- 
+Out of curiosity, is there a particular change in 2.5 (i.e. Our master
+branch) that you are particularly waiting for?Le lundi 28 septembre 2015, Nicholas Grealy  a Ã©crit :-- 
 Guillaume Laforge
 Apache Groovy committer & PMC member
 Product Ninja & Advocate at Restlet Blog: 

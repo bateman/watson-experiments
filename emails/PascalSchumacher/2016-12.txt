@@ -1,0 +1,5 @@
+Hello Paul,thanks a lot for volunteering as a release manager. :)Sadly the javadoc of StringGroovyMethods#uncapitalize contains an error 
+so, the unit tests fail with:MainJavadocAssertionTest > 
+StringGroovyMethodsJavadocAssertionTest.testAssertionFromStringGroovyMethodsLine213 
+FAILEDAssertion failed:assert 'Hello World' == 'hello world'.split(' ').collect{ 
+it.uncapitalize() }.join(' ')| | | |false | [hello, world] hello world[hello, world]Am 30.12.2016 um 07:25 schrieb Paul King:

@@ -1,1 +1,4 @@
-Good news Stergios. Keep up the good work!Cheers, Paul.
+There was a hung job that I killed. I also got rid of incubator from
+the repo url. Master seems to have built. Just waiting for the CI
+server to catch up on the 2_4_X branch.Cheers, Paul.On Sat, Jan 30, 2016 at 8:40 PM, Pascal Schumacher
+ wrote:

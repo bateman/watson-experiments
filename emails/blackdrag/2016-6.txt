@@ -1,1 +1,6 @@
-why is as method level annotation not good enough for you?[...]and what, besides bug fixing, improvements are you thinking of?bye Jochen
+Hi all,I know I can close a github pull request using a commit message, and I 
+know we cannot do it using the UI (as long as I am not the author of the 
+request at least), because it is a read-only mirror. But is there really 
+no other way to close a pull request... for example one I want not to 
+merge? Making dummy commits to master is not really a good thing. Afaik 
+making a commit to another branch won't close itbye Jochen

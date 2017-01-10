@@ -1,2 +1,23 @@
-Looks nice! Great work!On Tue, Jul 19, 2016 at 11:29 AM, Dylan Bijnagte
+You probably want to call toRowResult():@Grab('org.hsqldb:hsqldb:2.3.2')
+@GrabConfig(systemClassLoader=true)import groovy.sql.Sqldef sql = Sql.newInstance('jdbc:hsqldb:mem:MyDb', 'sa', '',
+'org.hsqldb.jdbcDriver')sql.execute '''
+  DROP TABLE MyTable IF EXISTS;
+  CREATE TABLE MyTable (
+    id   INTEGER,
+    name   VARCHAR(64),
+  );
+'''
+sql.execute '''
+  INSERT INTO MyTable (id, name) VALUES (1, 'Test1')
+  INSERT INTO MyTable (id, name) VALUES (2, 'Test2')
+'''def mb = new groovy.xml.MarkupBuilder()
+mb.root {
+  sql.eachRow('select * from MyTable') { next ->
+    row {
+      next.toRowResult().each { k, v ->
+        "$k"(v)
+      }
+    }
+  }
+}sql.close()On Sun, Jul 31, 2016 at 7:43 PM, GroovyBeginner
  wrote:

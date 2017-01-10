@@ -1,2 +1,2 @@
-I think it's a too risky breaking change. I would go for a separate method.
-x.self { ... }2016-07-06 14:20 GMT+02:00 Jochen Theodorou :
+Could it be related to your startup option? XaddExports:jdk.compiler/com.s
+un.tools.javac.api=ALL-UNNAMED2016-07-15 17:56 GMT+02:00 Jochen Theodorou :

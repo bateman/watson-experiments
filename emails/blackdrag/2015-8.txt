@@ -1,5 +1,9 @@
-Am 24.08.2015 17:30, schrieb JamieEchlin:well, I am no fan of warnings, which is why I never really implemented 
-them. There are some basics for that, but the wiring is missing. If you 
-want to contribute that, you are welcome to do sobye blackdrag-- 
+Am 25.08.2015 01:01, schrieb Keegan Witt:the cast is like a security feature in Java, which we don't use in 
+normal Groovy. That's why you can for example assign a long to a byte 
+too. @compileStatic behaves different in that, but maybe this conversion 
+has been forgottenthat looks like a bug to melooks like char conversion is missing some aspects. I guess this is also 
+due to the analogy of 1-char Strings and Character we use in normal 
+Groovy (not supported by @CompileStatic) which did let us forget about 
+some transformationsbye blackdrag-- 
 Jochen "blackdrag" Theodorou
 blog:

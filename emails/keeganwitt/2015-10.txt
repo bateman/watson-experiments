@@ -1,4 +1,5 @@
-Trying to wrap up 7465 this week.  Got one more question: What do you think
-of making *getText* and *getBytes* take an arg of whether to strip the BOM
-(if found)?-KeeganOn Tue, Jul 7, 2015 at 2:44 PM, Guillaume Laforge 
-wrote:
+So I'm looking at GROOVY-4658
+ and I noticed groovy
+has the --quickstart argument, but no other tools do (in groovy.c).  So
+dumb question: what does that arg do?  I can't find any reference to it in
+the codebase.  If it's useful, should any of the other tools have that arg?-Keegan

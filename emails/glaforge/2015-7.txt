@@ -1,6 +1,12 @@
-And did you also see the annotations on types?
-Wherever you have class names, basically, you'll be able to put annotations.
-Even for things like casts: def a = (@NotNull Foo)something-- 
+And Groovy developers read the users list as well of course :-)Moving from 1.7.4 to 2.4.4 is a big leap, as there have been a 96 versions
+released in between, if I count correctly!!!
+5 years have passed between those two release!!!But I can understand the motto "why fix what ain't broke" ;-)The Groovy team does its best to make Groovy as backward-compatible as
+possible, but there have been some minor breaking changes here and there to
+fix some incorrect behavior, plus some changes which might have an impact â€”
+sometimes certain things are not really specified or covered by our test
+suites, so people can rely on some aspects which might potentially evolve.Frankly, the best thing you can do at this point is just try it out!
+See if you get errors, and come back to us (on the users list) with the
+problems you might be encountering.Guillaume-- 
 Guillaume Laforge
 Apache Groovy committer & PMC member
 Product Ninja & Advocate at Restlet Blog: 

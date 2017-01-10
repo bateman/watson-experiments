@@ -1,5 +1,4 @@
-Hi Keith,Groovydoc also works on Java classes, so if you run Groovydoc on both
-Groovy and Java sources, they'll have the same stylesheet.Guillaume2015-06-20 19:07 GMT+02:00 Keith Suderman :-- 
+1 (binding)2015-06-26 9:27 GMT+02:00 CÃ©dric Champeau :-- 
 Guillaume Laforge
 Groovy Project Manager
 Product Ninja & Advocate at Restlet Blog: 

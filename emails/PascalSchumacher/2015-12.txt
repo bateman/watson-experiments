@@ -1,2 +1,7 @@
-Nice :)Merry Christmas,
-PascalAm 23.12.2015 um 13:36 schrieb Merlin Beedell:
+Ticket is solved. Your PRs are building. :)-------- Weitergeleitete Nachricht --------
+Betreff: 	Re: Github pull requests not picked up by CI server
+Datum: 	Mon, 28 Dec 2015 08:37:55 +0100
+Von: 	Pascal Schumacher 
+Antwort an: 	dev@groovy.apache.org, dev@groovy.apache.org
+An: 	dev@groovy.apache.orgAs it is still not working (I checked by force pushing a pull request) I 
+created a issue with infrastructure: Am 27.12.2015 um 09:25 schrieb Pascal Schumacher:

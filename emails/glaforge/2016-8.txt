@@ -1,0 +1,43 @@
+Hi all,Here's the proposed report for the Apache Board for August.Note the nice download numbers info: as of end of July, we've reached *12
+million downloads since the beginning of the year*, which is almost as much
+as the overall 12.7 million downloads from last year!Guillaume## Description:Apache Groovy is a multi-faceted programming language for the Java platform.
+Groovy is a powerful, optionally typed and dynamic language, with static-
+typing and static compilation capabilities, aimed at multiplying developersâ€™
+productivity thanks to a concise, familiar and easy to learn syntax. It
+integrates smoothly with any Java program, and immediately delivers to your
+application powerful features, including scripting capabilities, Domain-
+Specific Language authoring, runtime and compile-time meta-programming and
+functional programming.## Issues:The groovy-lang.org has been transferred to the Apache Software Foundation.
+We still have the dichotomy between the groovy-lang.org website,
+and groovy.apache.org which is still pointing at groovy-lang.org.## Activity:We made a new release on June 7th, with version 2.4.7.We're still investigating how to make more automatic releases,
+some experiments have started in this area,
+during the Gradle Summit conference.This quarter, we got 22 contributors to the codebase,
+including 15 non-committers, 6 of which were new.## Health report:Compared to last year's 12.7M downloads, up until July,
+we are already at 12M downloads for the first 7 months of the year
+(across both Maven Central and Bintray JCenter).We have a bit more users (7% increase) on the users list,
+but the number of posts has decreased.
+The summer period is often a bit less busy, so probably not worrying.
+However we have a bit more trafic on the dev list,
+indicating more discussions going on, which is good.Less tickets opened compared to last quarter, but more tickets closed.In terms of social presence, Groovy is 16th in the TIOBE language index.
+The @ApacheGroovy twitter account reached 1758 followers,
+compared to last quarter's 1475 (19% increase)The GR8Conf Europe & US 2016 conferences have taken place,
+and the next dedicated event will be the G3 Summit in December.## PMC changes: - Currently 9 PMC members.
+ - No new PMC members added in the last 3 months
+ - Last PMC addition was Andrew Bayer on Wed Nov 18 2015## Committer base changes: - Currently 16 committers.
+ - No new changes to the committer base since last report.## Releases: - 2.4.7 was released on Tue Jun 07 2016
+ - 2.4.6 was released on Feb 22 2016
+ - 2.4.5 was released on Sept 17 2015
+ - 2.4.4 was released on Jul 09 2015
+ - 2.4.3 was released on Mar 23 2015## Mailing list activity: - users@groovy.apache.org:
+    - 374 subscribers (up 26 in the last 3 months):
+    - 319 emails sent to list (404 in previous quarter) - dev@groovy.apache.org:
+    - 209 subscribers (up 3 in the last 3 months):
+    - 269 emails sent to list (208 in previous quarter) - issues@groovy.apache.org:
+    - 9 subscribers (up 0 in the last 3 months) - notifications@groovy.apache.org:
+    - 28 subscribers (up 1 in the last 3 months):
+    - 954 emails sent to list (836 in previous quarter)## JIRA activity: - 66 JIRA tickets created in the last 3 months
+ - 74 JIRA tickets closed/resolved in the last 3 months-- 
+Guillaume Laforge
+Apache Groovy committer & PMC Vice-President
+Developer  Cloud PlatformBlog: 
+Social: @glaforge  / Google+

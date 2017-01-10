@@ -1,0 +1,4 @@
+Hello everyone,Paul and John fixed a lot of issues recently, so there are now 44 fixed 
+issues:The last release was three months ago and people are waiting for a new 
+release, e.g.: I think this calls for a new release.What do you think?-PascalP.S.: I am repeating myself, but I think we should also release a 
+2.5.0-beta (even without the macro documentation).

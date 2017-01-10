@@ -1,8 +1,8 @@
-[...]exactly. The same applies to the usage of categories and to methods 
-added to the meta class. The problem is reduced if we delegate to the 
-implementation of an interface and all the important logic is based on 
-the interface type. Because @Delegate per default implements the 
-interfaces of the delegates.It is not an either-or. You can do both, causing less load for 
-methodMissing and faster dispatch.Presuming the availability and usage of certain extension methods is 
-imho ok for the static compiler, but not for dynamic Groovy - not if you 
-expect a runtime added extension method to have influencebye Jochen
+I think the biggest mistake is to allow the general overloading of "=". 
+Be it with some automated type coercion or another user over-writable 
+mechanism. We have to some extend for assignment to Boolean with 
+asBoolean, but not in general and not specialized for "=", especially 
+not for arbitrary types. I think it was a big mistake for Scala to 
+introduce something like this. It makes DSLs nicer, yes, but it makes it 
+incredibly difficult for the programmer to follow the program flow.So if we add custom operators, we should ensure they fit in the general 
+program flowbye Jochen

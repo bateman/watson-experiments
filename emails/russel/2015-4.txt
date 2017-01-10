@@ -1,8 +1,11 @@
-[â€¦][â€¦]Certainly did, thanks for reminding of the snapshot update site, I had 
-removed it from my list of update sites!
+[â€¦][â€¦]One does not manage a community (*). One can enable and empower a
+community, but it is not controllable (in a centrally-managed economy sort
+of way).(*) Especially one as large and dispersed as the Groovy community, most of
+whom are not actually known to the central committee.
 -- 
 Russel.
 =============================================================================
-Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
-41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
-London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder
+Dr Russel Winder     t:+44 20 7585 2200   voip:sip:
+russel.winder@ekiga.net
+41 Buckmaster Road   m:+44 7770 465 077   xmpp:russel@winder.org.uk
+London SW11 1EN, UK  w: www.russel.org.uk skype:russel_winder

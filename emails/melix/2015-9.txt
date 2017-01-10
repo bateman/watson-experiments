@@ -1,1 +1,7 @@
-That's because it's withDefault { 1 } ;)2015-09-29 10:05 GMT+02:00 Dinko SrkoÄ :
+And to conclude: yes, we have added such committers to the project. For
+reference, in addition to the initial list of committers, we added:- Dierk Koenig, non code committing so far, but Elder
+- AndrÃ©s Almiray, pushed code once, but more importantly, another Elder
+- Russel Winder, who is the definition of someone committed to the project
+but not pushing code :)
+- Keegan Witt, code pushing committerI honestly think we have a serious core here, and not all Apache projects,
+including TLP, can say that they have such an active community...2015-09-30 9:20 GMT+02:00 Emmanuel LÃ©charny :

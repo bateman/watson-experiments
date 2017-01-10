@@ -1,4 +1,0 @@
-On Wed, Sep 21, 2016 at 3:22 AM, Graeme Rocher 
-wrote:Hi Graeme,Good suggestion, and also seems to be a requested feature in GROOVY-6975
-[1].  So seems worthwhile to add a disableUnicodeEscaping or
-disableNonAsciiEscaping option.  I'll see if I can add that to the PR soon.[1]

@@ -1,2 +1,4 @@
-comparing with Java the last return should be annotated with the line 
-with the closing brace of the methodthat now is kind of a limitation of our bytecode generationbye Jochen
+I think we should orientate us at Java for this... and in Java I would 
+expect this to fail compilationthat I expectthat is not because of method resolution, that is because of how the 
+traits are mapped to BarAB. BarAB has in fact only one bar() method. So 
+I do not really see a problem with this onebye Jochen

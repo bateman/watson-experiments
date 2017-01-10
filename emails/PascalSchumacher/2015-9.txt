@@ -1,1 +1,2 @@
-Hi Richard,you can download groovy snapshots from -PascalAm 07.09.2015 um 23:43 schrieb Richard Heintze:
+1 to releasing soonthe macro stuff can be postponed to 2.6 imho, if we are not happy with 
+it yet and if it requires too much workAm 28.09.2015 um 11:14 schrieb CÃ©dric Champeau:

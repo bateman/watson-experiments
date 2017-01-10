@@ -1,0 +1,2 @@
+1 I was writing a type checking extension that did this but it would much
+better if it were built into the compiler itself

@@ -1,4 +1,2 @@
-I agree with what Jason said. I'm still up for `tap`. We could use
-`with(true) { ... }`, but I also dislike "with(returnThis: true) {... }"
-because it's not type safe.2016-11-09 14:56 GMT+01:00 Winnebeck, Jason 
-:
+It would definitely be a good thing to have a cleaner separation between
+the 2. It's not so easy to do so because of backwards compatibility issues.2016-11-26 10:22 GMT+01:00 Tatai MÃ¡rton :

@@ -1,2 +1,3 @@
-Hi Paco,support for final local variables will be available in the upcoming 2.5 
-version.-PascalAm 21.05.2015 um 20:25 schrieb Paco Zarate:
+So, left to do is just:- add the checksum generation for source zip to the gradle build (optional)
+- adjust the website to handle the "incubating" qualifiy of the source zip
+- find somebody who is willing to act as a release mangerI'm I missing anything?
