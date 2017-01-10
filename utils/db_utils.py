@@ -29,7 +29,7 @@ def process_raw_emails(cnx, committers, base_dir):
 
         query = "select message_body, email_address from messages as M " \
                 "inner join messages_people on messages_people.message_id = M.message_id " \
-                "where  M.mailing_list_url like '%groovy%' " \
+                "where  M.mailing_list_name like '%groovy%' " \
                 "AND (email_address = '{0}' OR email_address = '{1}') " \
                 "AND type_of_recipient = 'From' " \
                 "AND year(arrival_date) = %s AND month(arrival_date) = %s " \
