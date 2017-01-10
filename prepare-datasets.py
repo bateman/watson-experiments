@@ -54,8 +54,8 @@ def build_dataset(dataset, pr_reader):
     row_num = 0  # skip header
     for row in pr_reader:
         if row_num != 0:
-            url, owner, commenter, decision, submission_date, last_comment = row.strip().split(';', 6)
-            _, month, year = submission_date.strip().split(' ', 3)
+            url, owner, commenter, decision, submission_date, last_comment = [x.strip() for x in row.strip().split(';', 6)]
+            _, month, year = [x.strip() for x in submission_date.strip().split(' ', 3)]
             score = retrieve_trust_score(commenter, month, year)
             if decision == 'merged':
                 successful = 'TRUE'
