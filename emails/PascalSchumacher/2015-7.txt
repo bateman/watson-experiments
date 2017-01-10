@@ -1,4 +1,1 @@
-In the comments of  Bob 
-Saenger suggested to "remove the Eclipse-BuddyPolicy from the groovy-all 
-Manifest".I guess it's time to remove it (I have no knowledge of OSGi)?Cheers,
-PascalAm 30.07.2015 um 17:22 schrieb Wolfgang Pedot:
+strange, on my system these tests run on windowsAm 31.07.2015 um 16:17 schrieb Keegan Witt:

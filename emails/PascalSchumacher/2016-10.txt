@@ -1,0 +1,2 @@
+1 for releasing 2.4.8 as soon as possible. There are already 67 fixed 
+issues:Am 19.10.2016 um 16:32 schrieb Jochen Theodorou:

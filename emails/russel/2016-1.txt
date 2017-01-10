@@ -1,6 +1,20 @@
-Probably not. I compile and install from source. Takes about 22 mins on
-my workstation (which is 9 years old so I expect modern kit to do
-better).-- 
+[â€¦]Someone used a Windows machine to commit (many) files which have \r\n
+line endings. Linux person checks the files out, they have \r\n line
+endings.This has been a ####### pain for me for years, so much so I stopped
+even looking at the Groovy source code with a view to editing it.Most of your problems are likely related to which editor you are using.
+Emacs does at least recognize DOS line endings and work accordingly.The core difficulty is that some files have \n line endings and other
+have \r\n line endings. To me, this is an unacceptable state of
+affairs. Given this is a Git repository, all line endings in all files
+should be \n. No ifs, no buts, no mewling from Windows people, no
+worrying about changing 400 files and the gross silliness of the
+resultant commit logs.I think you should. Consistency of the repository far outweighs any
+stupidness of a monster line endings commit. Currently some files have
+\n and others \r\n, this means the repository is broken.No pull request with \r\n line endings should be acceptable. No commits
+from committers with \r\n line endings should be acceptable.Windows users need to read about and act upon the git property
+core.autocrlf before cloning the Groovy (or in fact any Git)
+repository, and most especially before making a pull request or
+pushing.I have just had to deal with this with another Git repository and a
+Mercurial oneâ€¦-- 
 Russel.
 =============================================================================
 Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net

@@ -1,2 +1,17 @@
-Hi Henrik,the groovy-eclipse snapshoots builds support Groovy 2.4.3. I use them at 
-work.-PascalAm 29.10.2015 um 04:46 schrieb Henrik Martin:
+Hi Keith,"org.codehaus.groovy.tools.shell.GroovyshInterpreterModeTest > 
+testBoundVar" also fails for me locally, but the test passes on all the 
+ci-server jobs.@Thibault Kruse: Maybe you have an idea why these test fail?Thanks,
+Pascal-------- Weitergeleitete Nachricht --------
+Betreff: 	Re: Groovy category throwing MissingMethodException and 
+MissingPropertyException when using multiple threads
+Datum: 	Sat, 31 Oct 2015 16:44:51 -0400
+Von: 	Keith Suderman 
+Antwort an: 	dev@groovy.incubator.apache.org
+An: 	dev@groovy.incubator.apache.orgHi Pascal,I mis-spoke. The build succeeds (ie. ./gradlew clean dist), however I am getting two test failures in groovy-groovysh:org.codehaus.groovy.tools.shell.GroovyshInterpreterModeTest > testBoundVarmultiple FAILED
+     groovy.lang.MissingPropertyException: No such property: y for class: groovysh_evaluateandorg.codehaus.groovy.tools.shell.GroovyshInterpreterModeTest > testBoundVar FAILED
+     groovy.lang.MissingPropertyException: No such property: x for class: groovysh_evaluateIf I remove these two tests everything else passes.Since the changes are minor (and hopefully uncontroversial) Iâ€™ve gone ahead and created the pull request. I hope I did it correctly.Cheers,
+Keith------------------------------
+Research Associate
+Department of Computer Science
+Vassar College
+Poughkeepsie, NY

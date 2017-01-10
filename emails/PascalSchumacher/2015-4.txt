@@ -1,2 +1,5 @@
-Hello everybody,the Groovy repository moved to Apache: It's now mirrored on github under Please send any pull requests to this repository.Thanks and kind regards,
-Pascal
+Hi Benedikt,thanks for the hint. :)My knowledge of git is very limited, so excuse me if I'm wrong, did you 
+use the--no-ff to create this commit:?I'm asking, because github shows you as the author of the commit. That 
+is something I would like to avoid (if possible), because I believe it's 
+detrimental to the motivation of contributers.- PascalBy the way: I really wish I would be able to contribute as much to open 
+source as you do. Congrats! :)Am 29.04.2015 um 15:07 schrieb Benedikt Ritter:

@@ -1,5 +1,7 @@
-JSON and XML being part of the standard Groovy distribution I can
-understand, but why YAML? If YAML, then why not INI, TOML, SDL, etc.?-- 
+I am assuming it is already well known that the Groovy build using
+gradlew fails on JDK9.Could not create an instance of type com.sun.tools.javac.api.JavacTool.Given CÃ©dric's work on Gradle we know this is Gradle's fault, and,
+indeed, how to fix it â€“ campaign to have CÃ©dric's fixes in a 2.13.1
+release of Gradle sometime next week.-- 
 Russel.
 =============================================================================
 Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net

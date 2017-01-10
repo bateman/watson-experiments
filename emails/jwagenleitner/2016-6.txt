@@ -1,4 +1,0 @@
-Adding the following system property may help to extend the time before OOM:groovy.use.classvalue=trueAt least for me on Groovy 2.4.7 with jdk8_91 using that property let the
-loop run 25 minutes (made about half the iterations) vs. ~2.5 minutes
-without the property.  I used a 64m heap.I believe the problem is related to GROOVY-7683.On Fri, Jun 24, 2016 at 11:12 PM, t.schoellhorn <
-t.schoellhorn@plattform-gmbh.de> wrote:

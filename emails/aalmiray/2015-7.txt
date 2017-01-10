@@ -1,0 +1,12 @@
+I think my vote (-1) is non binding ;-)And again, the only reason I voted as such is because I couldn't get a
+clean binary distribution from the source package by following the
+instructions to the letter. RAT complained about a missing header on a
+build related file. I know is silly but it needs fixing. Other than that
+the binaries look good to me!Cheers,
+Andres-------------------------------------------
+Java Champion; Groovy Enthusiast--
+What goes up, must come down. Ask any system administrator.
+There are 10 types of people in the world: Those who understand binary, and
+those who don't.
+To understand recursion, we must first understand recursion.On Mon, Jul 13, 2015 at 9:42 AM, CÃ©dric Champeau 
+wrote:

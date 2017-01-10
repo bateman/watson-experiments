@@ -1,8 +1,8 @@
-Jim,You beat me to it again :-)Updating the Gradle version number in build.gradle, running the wrapper
-task, running all the tests for a green, and if green committing, and
-then creating a pull request is the exact process.[â€¦]As far as I am aware there are no missing changes. My personal fork on
-GitHub should be the same as the GPars mainline repository. Last change
-I see was 2015-09-07T23:32:36+01:00.-- 
+[â€¦]It remains a very big shame that these two words (committer and
+committer) and their associated roles (core team member and person who
+updates the mainline repository) are so conflated by the ASF rules and
+procedures. The ASF really need to unbundle these concepts if it is a f
+orward looking organization.-- 
 Russel.
 =============================================================================
 Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net

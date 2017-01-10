@@ -1,4 +1,5 @@
-For Groovy itself::-)-- 
+Either it's thread-safe, or it's not; so unless there are other useful
+improvements, I agree it's better to rollback. No objection, Sir!Guillaume-- 
 Guillaume Laforge
 Apache Groovy committer & PMC Vice-President
 Developer  Cloud PlatformBlog: 

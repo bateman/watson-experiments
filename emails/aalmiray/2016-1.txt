@@ -1,0 +1,12 @@
+AFAIK you can't use Javadoc doclets without relaying on the Javadoc API,
+this is why you can't use Asciidoclet with Groovydoc (believe, I tried
+several options).
+Wrapping a doclet and adapting it for Groovydoc is not an option either
+(tried that too).The only option for standard doclets to work with Groovydoc is for
+Groovydoc to be base don the standard Javadoc API.-------------------------------------------
+Java Champion; Groovy Enthusiast--
+What goes up, must come down. Ask any system administrator.
+There are 10 types of people in the world: Those who understand binary, and
+those who don't.
+To understand recursion, we must first understand recursion.On Mon, Jan 25, 2016 at 9:37 AM, Peter Ledbrook 
+wrote:

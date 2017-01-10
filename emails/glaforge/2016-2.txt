@@ -1,0 +1,13 @@
+I agree with CÃ©dric.
+It'd be better to integrate the actual tips in the JavaDocs per se.
+Furthermore, the Groovy's GroovyDoc can also contain code samples that are
+actually tested, with assertions.
+So not only would that improve the documentation itself, without going
+through another hoop to visit a website elsewhere, but it'd also would
+increase the number of tests, ensuring higher quality, less future
+regressions, etc.
+It's really not just a matter of clicking on a link to learn more.-- 
+Guillaume Laforge
+Apache Groovy committer & PMC Vice-President
+Product Ninja & Advocate at Restlet Blog: 
+Social: @glaforge  / Google+

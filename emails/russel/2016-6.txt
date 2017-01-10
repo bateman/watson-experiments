@@ -1,11 +1,29 @@
-[â€¦]Groovy has no serious traction in the static world. Even with the
-marketing push given by many people, including myself, Groovy has the
-label "dynamic" firmly stuck to it; it is seen in the same grouping as
-Clojure (and JRuby and Jython). When people are no discussing
-refactoring of codebases then if the base language is Java then the
-choice of language is Kotlin.This sounds like lazy staff misusing a dynamic language. People using
-Groovy (and Clojure) as dynamic languages tend not to have this
-problem.-- Russel.
+Great to see the upgrade to Gradle 3, now it is feasible to build on
+JDK9. Nice one CÃ©dric.However the build fails :-(â€¦
+:groovy-xml:moduleDescriptor
+:groovy-xml:compileJava
+warning: [options] bootstrap class path not set in conjunction with -source 1.6
+warning: [options] source value 1.6 is obsolete and will be removed in a future release
+warning: [options] target value 1.6 is obsolete and will be removed in a future release
+warning: [options] To suppress warnings about obsolete options, use -Xlint:-options.
+Note: Some input files use or override a deprecated API.
+Note: Recompile with -Xlint:deprecation for details.
+Note: Some input files use unchecked or unsafe operations.
+Note: Recompile with -Xlint:unchecked for details.
+4 warnings
+:groovy-xml:compileGroovy
+startup failed:
+/home/users/russel/Repositories/Git/Groovy/subprojects/groovy-xml/src/main/groovy/groovy/xml/jaxb/JaxbGroovyMethods.groovy: 24: unable to resolve class javax.xml.bind.Marshaller
+Â @ line 24, column 1.
+Â Â Â import javax.xml.bind.Marshaller
+Â Â Â ^/home/users/russel/Repositories/Git/Groovy/subprojects/groovy-xml/src/main/groovy/groovy/xml/jaxb/JaxbGroovyMethods.groovy: 23: unable to resolve class javax.xml.bind.JAXBContext
+Â @ line 23, column 1.
+Â Â Â import javax.xml.bind.JAXBContext
+Â Â Â ^/home/users/russel/Repositories/Git/Groovy/subprojects/groovy-xml/src/main/groovy/groovy/xml/jaxb/JaxbGroovyMethods.groovy: 25: unable to resolve class javax.xml.bind.Unmarshaller
+Â @ line 25, column 1.
+Â Â Â import javax.xml.bind.Unmarshaller
+Â Â Â ^3 errors:groovy-xml:compileGroovy FAILEDFAILURE: Build failed with an exception.* What went wrong:
+Execution failed for task ':groovy-xml:compileGroovy'.-- Russel.
 =============================================================================
 Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
 41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk

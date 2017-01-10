@@ -1,3 +1,1 @@
-This is a bug in Groovy. Normally for a property those modifier bits
-are cleared:But for @Bindable it creates its own setters and bypass the above logic:The same will be true for @Vetoable:I created the following issue to track the problem:Cheers, Paul.On Tue, Oct 11, 2016 at 7:34 PM, Nicolas Peru
- wrote:
+nice!

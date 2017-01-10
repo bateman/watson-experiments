@@ -1,2 +1,10 @@
-Can you show us how you used eachRow?Cheers, Paul.---
+That sounds about right to me. It might also be nice if one of our mentors
+can do a trial run check of the source dist zip for us. You can find snapshot
+artifacts similar to what we would produce for the release on the CI server:[build number will vary - you might need to traverse down from a higher
+directory - click on "artifacts" on the "JDK 7 Build"]There are some known things we have, e.g. a binary jar for testing purposes,
+that we think are OK, but we need everyone on the same page wrt such things.
+And we might need a little time to fix anything that we can't go forward with.You can use "gradle(w) rat"  to invoke rat with our current exclusions file.
+The Rat integration needs some work. It currently uses the command-line
+integration which is a little limited. We need some tweaks for proper
+gradle integration at some point.Cheers, Paul.---
 This email has been checked for viruses by Avast antivirus software.

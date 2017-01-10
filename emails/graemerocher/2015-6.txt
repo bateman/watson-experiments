@@ -1,5 +1,0 @@
-Agreed, I wouldn't break binary compatibility in a minor release, if
-this change is to be made it should be done in the next major release
-branch IMOOn Mon, Jun 8, 2015 at 3:02 PM, Winnebeck, Jason
- wrote:-- 
-Graeme Rocher

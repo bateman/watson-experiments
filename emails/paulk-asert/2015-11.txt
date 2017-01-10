@@ -1,3 +1,10 @@
-Yes, it was in 2.3.4 to make @Sortable work with @CompileStatic/@TypeChecked.
-See here:and
-SortableTransformTest#testSortableWithCompileStaticCheers, Paul.
+It might be interesting to have a reworked set of metrics which we
+could apply on an as needed basis (perhaps once a quarter or once a
+year) to reassess maturity on an on-going basis. But I agree the
+current version (the wording at least) is very much geared towards
+graduation from incubation so we don't want how it is in the current
+form. I am also not keen to create more "overhead" work than needed so
+it might be best to wait until we can almost automatically collect a
+bunch of stats that could form the basis of the quarterly report to
+the board.Paul.On Fri, Nov 20, 2015 at 5:33 AM, Bertrand Delacretaz
+ wrote:

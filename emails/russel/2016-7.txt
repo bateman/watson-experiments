@@ -1,0 +1,11 @@
+I am fairly sure, actually I am certain otherwise I wouldn't have a
+Groovy installation :-), I used to get a full build and deploy to the
+install location before the asciidoc tasks started. So the issue is
+what has changed in the build to change the order of task evaluation.This is not entirely a big deal for anyone else I guess, just me.
+Â 
+-- 
+Russel.
+=============================================================================
+Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
+41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
+London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder

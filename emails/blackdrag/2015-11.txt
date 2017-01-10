@@ -1,5 +1,4 @@
-If the class is made to be thread safe, then it will need quite a bit 
-work on the synchronization. As it is now, it is far from threadsafe. 
-That already starts with the multiple locks in use and if that is really 
-correct - multiple locks in methods calling each other can easily create 
-deadlocks for example.bye blackdrag
+Since in the other thread (challenges through Java modules (aka jigsaw)) 
+the idea to finance the work to be done for JDK9 with a kickstarter 
+campaign came up, I was wondering who would be even available for this - 
+assuming there is enough money of course.So who would do it?

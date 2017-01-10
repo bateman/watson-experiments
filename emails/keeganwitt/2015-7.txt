@@ -1,5 +1,3 @@
-As I understand it, methodMissing / propertyMissing don't really work on
-inner classes as things are currently designed.  You might find these
-helpfulAt some point we might improve the implementation, but I doubt it'll be any
-time soon.-KeeganOn Mon, Jul 27, 2015 at 8:07 AM, Fernando Ariel Niwes Naufal <
-fernando@soluciones3f.com.ar> wrote:
+It might be better to ask this question on the user list rather than the
+dev list, to get a bigger audience for finding out what other folks have
+encountered.-Keegan

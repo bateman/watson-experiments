@@ -1,12 +1,21 @@
-Am 23.07.2015 00:39, schrieb Lowery, Jeff:First of all: You shall not use GString as map key.
-a) GString is a mutable, using mutables as map keys can lead to very 
-interesting behaviour of the map
-b) GString is not having the same hashcode as String even if the 
-toString() representation is the same.Factor (a) is probably not a problem here, but (b) can easily cause a 
-problem.you are not really giving enough information. For example, why not 
-simply use a list here? The key seems not to play an important role, 
-thus I doubt that searching is the problem you try to solve with the 
-map. But then it is questionable if a map is even the right 
-datastructure for your problem.bye blackdrag-- 
+Am 28.07.2015 14:26, schrieb Steve Amerige:first of all, I got the impression that the discussion so far was a tiny 
+bit misguided. We have the zip distribution and the jars that go to 
+maven. The maven artifacts of course would stay as they are, this is 
+only about the zip distribution.[...]The reason that we have the version numbers there basically is, that the 
+jars in the zip are the same jars as for maven, that's why they have 
+version numbers. It was not all that of a big deal before we started 
+having 17+ modules.[...]license information must go into the LICENSE and NOTICE (and DISCLAIMER) 
+files as per ASF requirements. Checksums are imho not making sense as 
+part of the zip, because if the zip is manipulated, then it is no use to 
+use the zip contents to verify the zip contents. As for the version 
+number... I think a file VERSION is often used for that.But Steve, I do have a question...
+Normally the things you describe are part of the installation process as 
+well as making a package for the system installation. That means 
+normally you want a system package. Installing software packages 
+manually in a system with a packaging manager is usually a bad idea.GVM was mentioned, but GVM is not for a system-wide installation like 
+Steve wants it. And it is (currently) not a way to provide libraries for 
+usage by applications outside of a GVM package.As for how.... changing distSpec in assemble.groovy to include some 
+renames may do it. Anyone interested in doing a pull request? Of course 
+I would also like to hear Cedric as our current build master about this.bye blackdrag-- 
 Jochen "blackdrag" Theodorou
 blog:

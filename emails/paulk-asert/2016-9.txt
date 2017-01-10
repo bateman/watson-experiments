@@ -1,15 +1,2 @@
-Forwarding your question to the users list since it is about using Groovy.Cheers, Paul.---------- Forwarded message ----------
-From: ganna_bc 
-Date: Thu, Sep 22, 2016 at 7:51 PM
-Subject: Calling Ant target â€œcollectâ€ from Groovy
-To: dev@groovy.incubator.apache.orgI am trying to replace run our test suite with Jenkins pipeline, during this
-for the old ant file we are writing Groovy script where for the Ant target
-"collect" how can I replace it with the Groovy script.I tried below code :Groovy script is :Project project1=new Project()
-project1.init()
-project1.initProperties()
-project1.setProperty("includes","com*.xml")
-project1.setProperty("output-file","test-results.xml")
-ProjectHelper projectHelper1=new ProjectHelper()
-projectHelper1.parse(project1,antFile)
-project1.executeTarget("collect")The problem is that how can I use the dir="${eclipse_home}" in groovy ?--
-View this message in context:Sent from the Groovy Dev mailing list archive at Nabble.com.
+In terms of process, I think normally we prepare the release artefacts
+and vote on release of those artefacts.Cheers, Paul.

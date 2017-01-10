@@ -1,1 +1,3 @@
-the problem was an ambiguity with the divisionbye Jochen
+[...]ah, ok. I am used to find those things in gradle.properties now... Is 
+there any reason we cannot transfer all those properties in that ext 
+block there?bye Jochen

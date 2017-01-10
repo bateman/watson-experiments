@@ -1,20 +1,3 @@
-If you want to avoid the use of ExpandoMetaClass and that you 
-potentially want to have this behavior on multiple classes, you can now 
-rely on the traits for this. I had written this in a presentation about 
-traits for S2GX last year:|trait ExpandoTrait {||
-||    private final Map values = [:]||
-||    def propertyMissing(String name) { values.get(name) }||
-||    void setProperty(String name, value) {||
-||        println "Setting dynamic property $name"||
-||        values.put(name, value)||
-||    }||
-||}||
-||class Person implements ExpandoTrait {||
-||    String name||
-||}||
-||def p = new Person(name: 'Cedric')||
-||assert p.name == 'Cedric'||
-||p.age = 35||
-||assert p.age == 35|Best regards,\-- 
+It is likely outdated. I think it should be `jar` and `idea` together.-- 
 CÃ©dric Champeau
 Groovy language developer

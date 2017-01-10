@@ -1,1 +1,6 @@
-@DelegatesTo should be understood by Idea and I thought by Eclipse too
+[...]which is no wonder if the value strongly references the keyat least the weak reference to Class in ClassInfo is something I think 
+we can do without too much danger. Of course we may have to handle the 
+case in which a ClassInfo still exists, but the class is collected...As for the introspector. My suggestion would be to clean the 
+introspector of the specific class at the end of MetaclassImpl#addPropertiesyeah.... I think, that's not good enough for us. You can have extension 
+methods to ther classes, so it is no good if these get collected without 
+recovery for the extension methodsbye Jochen

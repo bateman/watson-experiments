@@ -1,0 +1,5 @@
+Perhaps a first start might be to look at the AST transforms for ActionEvents:This will illustrate Java's property change and action events within JavaBeans and
+swing programming. And also some Groovy syntactic sugar (@ListenerList, @Bindable)
+over the top. I imagine you'll want something similar but for a more generic Event
+class.Cheers, Paul.---
+This email has been checked for viruses by Avast antivirus software.

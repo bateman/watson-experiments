@@ -1,0 +1,5 @@
+Agreed, it would be strange to not have any documentation for the focal
+point of a release. Are there any external references which we could direct
+users to? Not from within the repo itself, but when promoting the release
+elsewhere e.g. Twitter.On Sun, Mar 13, 2016 at 8:49 AM, CÃ©dric Champeau 
+wrote:

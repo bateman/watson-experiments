@@ -1,1 +1,10 @@
-Thanks!Am 29.06.2015 um 09:57 schrieb Paolo Piersanti:
+Hi everybody,multiple people reported to be affected by this regression 
+( and Jochen scheduled 
+it to be fixed in multiple 2.3.X versions, but we never got around to 
+actually fix it.Now we got a pull request 
+( which passes all 
+tests on the ci server 
+( 
+and looks o.k. to me.It would be very nice, if anybody more knowledgeable in this area could 
+do review.Thanks and kind regards,
+Pascal

@@ -1,5 +1,1 @@
-My point is really that if JDK 9 changes what #getSimpleName returns for
-our closures, that's a breaking change that is not under our control.
-Changing the behavior of Groovy, whatever it is, means that older classes
-will not be compatible with JDK 9, at least for the code in the wild which
-relies on #getSimpleName.2015-06-19 15:14 GMT+02:00 Jochen Theodorou :
+Thanks for the clarification, it wasn't obvious to me :)2015-06-29 9:58 GMT+02:00 Bertrand Delacretaz :

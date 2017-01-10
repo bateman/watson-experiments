@@ -1,1 +1,1 @@
-This is clearly a bug. Can you file a JIRA issue for this?2016-09-02 15:05 GMT+02:00 cazacugmihai :
+That's correct. No need to worry, it's expected :)2016-09-29 21:19 GMT+02:00 John Wagenleitner :

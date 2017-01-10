@@ -1,4 +1,5 @@
-That's correct David. The dollar slashy string handles a bunch of edge
-cases that arise with slashy strings in a more sane way but are still
-parsed after unicode characters.Cheers, Paul.On Wed, Feb 10, 2016 at 2:28 AM, David M. Karr
+Ah yes, I'd forgotten about that line of thinking. I still believe we
+should be able to set things up so that prod code isn't affected by
+Spock but I don't have time to investigate further right now so being
+extra cautious as per CÃ©dric's comment is the way to go.Cheers, Paul.On Wed, Feb 24, 2016 at 10:24 PM, Jesper Steen MÃ¸ller
  wrote:

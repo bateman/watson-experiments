@@ -1,0 +1,16 @@
+I like custom operators as in Algol-68 and Scala. It is just that some
+Scala codes take things too far, showing a lack of self-restraint, and
+inability to read. This however is not a reason to abandon the idea.
+Consider that C++ and Python both restrict the overloading to the
+operators known to the compiler. Note that Java removed this because it
+was too hard for programmers to understand. Note that Groovy has
+reintroduced this because programmers wanted it. Also that Scala and
+Kotlin have followed suit and/or gone further.There is a balance between condescension and authoritarianism (which a
+number of programming languages are now following) and leaving it to
+the programmer to do the right thing at the risk of them not, but it is
+their problem.  I am not a fan of condescending authoritarianism.-- 
+Russel.
+=============================================================================
+Dr Russel Winder      t: +44 20 7585 2200   voip: sip:russel.winder@ekiga.net
+41 Buckmaster Road    m: +44 7770 465 077   xmpp: russel@winder.org.uk
+London SW11 1EN, UK   w: www.russel.org.uk  skype: russel_winder
