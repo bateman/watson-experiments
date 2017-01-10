@@ -1,5 +1,5 @@
-beautifulsoup4==4.4.1
 mysql-connector==2.1.4
+numpy==1.11.3
 pysolr==3.6.0
 requests==2.12.4
 watson-developer-cloud==0.23.0
