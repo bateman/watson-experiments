@@ -53,6 +53,7 @@ def __as_number(month):
 
 
 def main():
+    print("Building dataset for logistic regression")
     dataset = list()
     header = ('PRid', 'Successful', 'PropensityToTrust')
     dataset.append(header)
