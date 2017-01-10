@@ -23,7 +23,7 @@ Jochen Theodorou blackdrag
 Guillaume Laforge glaforge
 Jason Dillon jdillon
 Keegan Witt keeganwitt
-Cédric Champeau melix
+Cï¿½dric Champeau melix
 Pascal Schumacher PascalSchumacher
 Paul King paulk-asert
 Tim Yates timyates 
@@ -35,3 +35,5 @@ rvs;Roman Shaposhnik;roman@shaposhnik.org:rvs@apache.org
 abayer;Andrew Bayer;andrew.bayer@gmail.com
 bdelacretaz;Bertrand Delacretaz;bdelacretaz@apache.org
 jim;Jim Jagielski;jim@jagunet.com
+graemerocher;Graeme Rocher;graeme.rocher@gmail.com;6212
+jwaGenleitner;John Wagenleitner;john.wagenleitner@gmail.com;53495
