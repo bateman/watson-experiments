@@ -16,7 +16,7 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main():
-    committers = file_utils.load_emails(os.curdir + os.sep + '/groovy-coreteam.csv')
+    committers = file_utils.load_emails(os.curdir + os.sep + 'groovy-coreteam.csv')
     base_dir = os.curdir + os.sep + 'emails'
     if not os.path.exists(base_dir):
         cnx = db_utils.connect()
