@@ -4,6 +4,7 @@ import glob
 import os
 import time
 import collections
+import numpy
 
 from watson_developer_cloud import ToneAnalyzerV3
 
@@ -16,7 +17,7 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main():
-    committers = file_utils.load_emails(os.curdir + os.sep + 'groovy-coreteam.csv')
+    committers = file_utils.load_core_team_members(os.curdir + os.sep + 'groovy-coreteam.csv')
     base_dir = os.curdir + os.sep + 'emails'
     if not os.path.exists(base_dir):
         cnx = db_utils.connect()
@@ -40,6 +41,9 @@ def main():
             rows = dict()
             lookup = '{0}{1}{2}{1}*.txt'.format(base_dir, os.sep, dev['id'])
             rows = dict()
+            overall_content = list()
+            scores = list()
+            # compute agreeableness score from email bodies per month
             for email in glob.glob(lookup):
                 y_m, _ = email.split('.txt', 1)
                 _, y_m = y_m.split(base_dir + os.sep + dev['id'] + os.sep)
@@ -50,9 +54,20 @@ def main():
                     content = f.read()
                     js = tone_analyze(content)
                     agreeableness_score = js['document_tone']['tone_categories'][0]['tones'][3]['score']
+                    scores.append(agreeableness_score)
                     rows[y_m] = agreeableness_score
                     # Wait for a bit
-                    time.sleep(.300)
+                    time.sleep(.200)
+                    overall_content.append(content)
+
+            # average agreeableness computed per month
+            rows['average'] = numpy.mean(scores)
+            # agreeablenes computed on the overall email bodies
+            overall_content = '\n'.join(overall_content)
+            js = tone_analyze(overall_content)
+            overall_agreeableness_score = js['document_tone']['tone_categories'][0]['tones'][3]['score']
+            rows['overall'] = overall_agreeableness_score
+            time.sleep(.200)
 
             rows = collections.OrderedDict(sorted(rows.items()))
             for key, value in rows.items():
