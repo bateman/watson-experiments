@@ -11,7 +11,7 @@ capture.output(v, file="regression.txt", append = TRUE)
 capture.output(estimate, file="regression.txt", append = TRUE)
 
 library(pROC)
-prob=predict(logit, type=c("response"))
+prob=predict(logit, type="response")
 dataset$prob=prob
 #creazione della curva
 g <- roc(Successful ~ prob, data = dataset)
