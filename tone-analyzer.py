@@ -57,17 +57,21 @@ def main():
                     scores.append(agreeableness_score)
                     rows[y_m] = agreeableness_score
                     # Wait for a bit
-                    time.sleep(.200)
+                    time.sleep(.150)
                     overall_content.append(content)
 
             # average agreeableness computed per month
             rows['average'] = numpy.mean(scores)
-            # agreeablenes computed on the overall email bodies
+            # max agreeableness
+            rows['max'] = numpy.max(scores)
+            # max agreeableness
+            rows['min'] = numpy.min(scores)
+            # agreeableness computed on the overall email bodies
             overall_content = '\n'.join(overall_content)
             js = tone_analyze(overall_content)
             overall_agreeableness_score = js['document_tone']['tone_categories'][0]['tones'][3]['score']
             rows['overall'] = overall_agreeableness_score
-            time.sleep(.200)
+            time.sleep(.150)
 
             rows = collections.OrderedDict(sorted(rows.items()))
             for key, value in rows.items():
