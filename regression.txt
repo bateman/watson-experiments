@@ -4,23 +4,23 @@ glm(formula = Successful ~ I(PropensityToTrust == "HIGH"), family = binomial(),
     data = dataset)
 
 Deviance Residuals: 
-     Min        1Q    Median        3Q       Max  
--2.15618   0.06348   0.45376   0.45376   1.24913  
+    Min       1Q   Median       3Q      Max  
+-2.1758   0.4437   0.4437   0.4437   0.8712  
 
 Coefficients:
-                                   Estimate Std. Error z value Pr(>|z|)    
-(Intercept)                         -0.1671     0.2897  -0.577    0.564    
-I(PropensityToTrust == "HIGH")TRUE   2.3887     0.4550   5.250 1.53e-07 ***
+                                   Estimate Std. Error z value Pr(>|z|)   
+(Intercept)                          0.7732     0.4935   1.567  0.11721   
+I(PropensityToTrust == "HIGH")TRUE   1.4955     0.5793   2.582  0.00983 **
 ---
-Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Signif. codes:  0 â€˜***â€™ 0.001 â€˜**â€™ 0.01 â€˜*â€™ 0.05 â€˜.â€™ 0.1 â€˜ â€™ 1
 
 (Dispersion parameter for binomial family taken to be 1)
 
-    Null deviance: 157.45  on 139  degrees of freedom
-Residual deviance: 125.14  on 138  degrees of freedom
-AIC: 129.14
+    Null deviance: 109.30  on 146  degrees of freedom
+Residual deviance: 103.35  on 145  degrees of freedom
+AIC: 107.35
 
-Number of Fisher Scoring iterations: 4
+Number of Fisher Scoring iterations: 5
 
 [1] "Odds ratio"
-[1] 10.9
+[1] 4.46

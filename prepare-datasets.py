@@ -11,19 +11,45 @@ def __build_dataset(dataset, pr_reader, committer_ids):
                                                                               row.strip().split(';', 6)]
             if owner not in committer_ids:
                 _, month, year = [x.strip() for x in submission_date.strip().split(' ', 3)]
-                score = __retrieve_trust_score(commenter, month, year)
-                if decision == 'merged':
-                    successful = 'TRUE'
-                else:
-                    successful = 'FALSE'
-                _, pr_id = url.split('/pull/')
-                r = (pr_id, successful, str(score).strip())
-                # r = '{0};{1};{2}'.format(pr_id, successful, score).strip()
-                dataset.append(r)
+                #score = __retrieve_trust_score_by_month(commenter, month, year)
+                score = __retrieve_trust_score_by_param(commenter, 'overall')
+                #score = __retrieve_trust_score_by_param(commenter, 'average')
+                #score = __retrieve_trust_score_by_param(commenter, 'min')
+                #score = __retrieve_trust_score_by_param(commenter, 'max')
+                if score != 'NA':
+                    if decision == 'merged':
+                        successful = 'TRUE'
+                    else:
+                        successful = 'FALSE'
+                    _, pr_id = url.split('/pull/')
+                    r = (pr_id, successful, str(score).strip())
+                    # r = '{0};{1};{2}'.format(pr_id, successful, score).strip()
+                    dataset.append(r)
         row_num += 1
 
 
-def __retrieve_trust_score(dev, month, year):
+def __retrieve_trust_score_by_param(dev, param="overall"):
+    score = 'NA'
+    filename = 'results{0}{1}.csv'.format(os.sep, dev)
+    try:
+        dev_reader, _file = file_utils.load_corpus(filename)
+        for row in dev_reader:
+            t, s = [x.strip() for x in row.split(';', 2)]
+            if t == param:
+                s = float(s)
+                if s < 0.5:
+                    score = 'LOW'
+                else:
+                    score = 'HIGH'
+                break
+        _file.close()
+    except IOError:
+        pass
+
+    return score
+
+
+def __retrieve_trust_score_by_month(dev, month, year):
     score = 'NA'
     filename = 'results{0}{1}.csv'.format(os.sep, dev)
     month_no = __as_number(month)
