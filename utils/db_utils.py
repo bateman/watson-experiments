@@ -73,6 +73,7 @@ def __clean_up(message_body):
     clean_message_body = soup.text
 
     clean_message_body = re.sub(r'^\s*>+( .*)?', '', clean_message_body, flags=re.MULTILINE)
+    clean_message_body = re.sub(r'^\s*$+( .*)?', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'^\s*\+', '', clean_message_body, flags=re.MULTILINE)
     clean_message_body = re.sub(r'^\s*---\+', '', clean_message_body, flags=re.MULTILINE)
     # dates
