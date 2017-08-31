@@ -5,6 +5,7 @@ Currently supports only Apache Software Foundation (ASF) [projects](https://www.
 ## Steps
 
 ### 1. Extract emails from mbox archive
+`$ sh mlstats-run.sh http://url.to/mailinglist/mbox/archive`
 
 ### 2. Extract pull requests from project's GitHub
 `parse_pr.py`
