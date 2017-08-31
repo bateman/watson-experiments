@@ -17,16 +17,16 @@ tone_analyzer = ToneAnalyzerV3(
 
 
 def main(argv):
-    project = argv[0]
-    committers = file_utils.load_core_team_members(os.curdir + os.sep + '{0}-coreteam.csv'.format(project))
-    base_dir = os.curdir + os.sep + project + os.sep + 'emails'
+    ml_name = argv[0]
+    committers = file_utils.load_core_team_members(os.curdir + os.sep + '{0}-coreteam.csv'.format(ml_name))
+    base_dir = os.curdir + os.sep + ml_name + os.sep + 'emails'
     if not os.path.exists(base_dir):
         cnx = db_utils.connect()
         print ('Retrieving developers\' emails from the db')
-        db_utils.process_raw_emails(cnx, committers, base_dir)
+        db_utils.process_raw_emails(cnx, ml_name, committers, base_dir)
         db_utils.disconnect(cnx)
 
-    results_dir = os.curdir + os.sep + project + os.sep + 'results'
+    results_dir = os.curdir + os.sep + ml_name + os.sep + 'results'
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
     print ('Computing developers\' agreeableness scores from \'{0}\' (everything in \'{1}\' will be overwritten)'.

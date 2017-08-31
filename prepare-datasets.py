@@ -1,21 +1,22 @@
-from utils import file_utils
 import os
 from time import strptime
+
+from utils import file_utils
 
 
 def __build_dataset(dataset, pr_reader, committer_ids):
     row_num = 0  # skip header
     for row in pr_reader:
         if row_num != 0:
-            url, owner, commenter, decision, submission_date, last_comment = [x.strip() for x in
-                                                                              row.strip().split(';', 6)]
+            url, owner, committer_commenter, decision, submission_date, _ = [x.strip() for x in
+                                                                             row.strip().split(';', 6)]
             if owner not in committer_ids:
                 _, month, year = [x.strip() for x in submission_date.strip().split(' ', 3)]
-                #score = __retrieve_trust_score_by_month(commenter, month, year)
-                score = __retrieve_trust_score_by_param(commenter, 'overall')
-                #score = __retrieve_trust_score_by_param(commenter, 'average')
-                #score = __retrieve_trust_score_by_param(commenter, 'min')
-                #score = __retrieve_trust_score_by_param(commenter, 'max')
+                # score = __retrieve_trust_score_by_month(committer_commenter, month, year)
+                score = __retrieve_trust_score_by_param(committer_commenter, 'overall')
+                # score = __retrieve_trust_score_by_param(committer_commenter, 'average')
+                # score = __retrieve_trust_score_by_param(committer_commenter, 'min')
+                # score = __retrieve_trust_score_by_param(committer_commenter, 'max')
                 if score != 'NA':
                     if decision == 'merged':
                         successful = 'TRUE'

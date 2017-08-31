@@ -18,7 +18,7 @@ def disconnect(cnx):
 
 # first email march 2015
 # last email december 2016
-def process_raw_emails(cnx, committers, base_dir):
+def process_raw_emails(cnx, ml_name, committers, base_dir):
     for dev in committers:
         id = dev['id']
         out_dir = '{0}/{1}'.format(base_dir, id)
@@ -29,11 +29,11 @@ def process_raw_emails(cnx, committers, base_dir):
 
         query = "select message_body, email_address from messages as M " \
                 "inner join messages_people on messages_people.message_id = M.message_id " \
-                "where  M.mailing_list_name like '%groovy%' " \
-                "AND (email_address = '{0}' OR email_address = '{1}') " \
+                "where  M.mailing_list_name like '%{0}%' " \
+                "AND (email_address = '{1}' OR email_address = '{2}') " \
                 "AND type_of_recipient = 'From' " \
                 "AND year(arrival_date) = %s AND month(arrival_date) = %s " \
-                "order by arrival_date ASC;".format(sender, sender_alias)
+                "order by arrival_date ASC;".format(ml_name, sender, sender_alias)
         cursor = cnx.cursor()
 
         # year 2015

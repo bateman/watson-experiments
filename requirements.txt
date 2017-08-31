@@ -1,5 +1,8 @@
+beautifulsoup4==4.5.3
 mysql-connector==2.1.4
 numpy==1.11.3
+pygithub3==0.5.1
+PyJWT==1.5.2
 pysolr==3.6.0
 requests==2.12.4
 watson-developer-cloud==0.23.0
