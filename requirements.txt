@@ -5,4 +5,5 @@ pygithub3==0.5.1
 PyJWT==1.5.2
 pysolr==3.6.0
 requests==2.12.4
+Unidecode==0.4.21
 watson-developer-cloud==0.23.0

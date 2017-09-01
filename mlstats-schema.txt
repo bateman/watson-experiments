@@ -39,6 +39,16 @@ messages_people;
 
 queries:  
 
+select name, MP.email_address from messages_people as MP
+inner join messages as M on MP.message_id = M.message_id
+inner join people on people.email_address = MP.email_address
+where  M.mailing_list_url like '%drill%'
+GROUP BY name, MP.email_address
+INTO OUTFILE '/tmp/drill-senders.csv'
+FIELDS TERMINATED BY ';'
+ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
 * Selezionare tutti i messagge body delle email inviate da un committer a tutte le mailing list groovy in un determinato mese
 select message_body from messages as M
 inner join messages_people on messages_people.message_id = M.message_id

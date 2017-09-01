@@ -36,6 +36,7 @@ def process_raw_emails(cnx, ml_name, committers, base_dir):
                 "order by arrival_date ASC;".format(ml_name, sender, sender_alias)
         cursor = cnx.cursor()
 
+        # TODO should find start/end month/year through queries
         # year 2015
         current_month = 3
         current_year = 2015

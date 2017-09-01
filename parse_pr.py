@@ -13,7 +13,8 @@ log.setLevel(logging.INFO)
 user = 'apache'
 repo = 'drill'
 
-gh = Github(login='bateman', password='77eraPS3', user=user, repo=repo)
+gh = Github(user=user, repo=repo)
+gh.repos.set_token(token='2f4f0e4d7ced015a65fce4464e90ee0d5a5e6ded')
 log.info('Got repo %s/%s ' % (user, repo))
 
 pull_requests = gh.pull_requests.list(state='closed').all()
@@ -69,6 +70,7 @@ for pr in pull_requests:
             except KeyError:
                 commenters[c.user['login']] = 1
 
+        # TODO improve this
         if len(commenters) > 0:
             commenter, _ = sorted(commenters.iteritems(), key=lambda (k, v): (v, k), reverse=True).pop(0)
         else:
