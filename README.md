@@ -14,7 +14,7 @@ Currently supports only Apache Software Foundation (ASF) [projects](https://www.
 `get_core_team.py`
 
 ### 4. Analyze propensity to trust (measure agreeableness score)
-`tone-analyzer.py`
+`tone-analyzer.py PROJECT_NAME`
 
 ### 5. Building dataset for logistic regression analysis
 `prepare-datasets.py`
