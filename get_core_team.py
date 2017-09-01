@@ -11,16 +11,16 @@ log = logging.getLogger('GET-CORE')
 log.setLevel(logging.INFO)
 
 # check api limit
-# curl -i 'https://api.github.com/users/bateman?client_id=7883480a7ca5510ee780&client_secret=ff3b25fc79f01dc9750b875268ee78d1cc01e32b'
+# curl -i 'https://api.github.com/users/bateman?client_id=****&client_secret=****'
 
 
 user = 'apache'
 repo = 'drill'
 
-url = 'https://api.github.com/repos/{0}/{1}/contributors?client_id=7883480a7ca5510ee780&client_secret=ff3b25fc79f01dc9750b875268ee78d1cc01e32b'.format(
+url = 'https://api.github.com/repos/{0}/{1}/contributors?client_id=*****&client_secret=*****'.format(
     user, repo)
 
-response = requests.get(url, params={'auth-token': '2f4f0e4d7ced015a65fce4464e90ee0d5a5e6ded'}, verify=True)
+response = requests.get(url, params={'auth-token': '*****'}, verify=True)
 # For successful API call, response code will be 200 (OK)
 log.debug('HTTP request returned response code %s' % response.status_code)
 core_team = list()
@@ -31,10 +31,10 @@ if response.ok:
 
     for c in data:
         log.info('Analyzing user %s' % c['login'])
-        url = 'https://api.github.com/users/{0}?client_id=7883480a7ca5510ee780&' \
-              'client_secret=ff3b25fc79f01dc9750b875268ee78d1cc01e32b'.format(c['login'])
+        url = 'https://api.github.com/users/{0}?client_id=*****&' \
+              'client_secret=****'.format(c['login'])
 
-        response = requests.get(url, params={'auth-token': '2f4f0e4d7ced015a65fce4464e90ee0d5a5e6ded'}, verify=True)
+        response = requests.get(url, params={'auth-token': '*****'}, verify=True)
         # For successful API call, response code will be 200 (OK)
         log.debug('HTTP request returned response code %s' % response.status_code)
 

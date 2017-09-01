@@ -14,7 +14,7 @@ user = 'apache'
 repo = 'drill'
 
 gh = Github(user=user, repo=repo)
-gh.repos.set_token(token='2f4f0e4d7ced015a65fce4464e90ee0d5a5e6ded')
+gh.repos.set_token(token='*****')
 log.info('Got repo %s/%s ' % (user, repo))
 
 pull_requests = gh.pull_requests.list(state='closed').all()

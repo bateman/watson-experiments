@@ -28,8 +28,9 @@ def process_raw_emails(cnx, ml_name, committers, base_dir):
         sender_alias = dev['alias']
 
         query = "select message_body, email_address from messages as M " \
-                "inner join messages_people on messages_people.message_id = M.message_id " \
-                "where  M.mailing_list_name like '%{0}%' " \
+                "inner join messages_people as MP on MP.message_id = M.message_id " \
+                "inner join mailing_lists as ML on ML.mailing_list_url = MP.mailing_list_url" \
+                "where  ML.mailing_list_name like '%{0}%' " \
                 "AND (email_address = '{1}' OR email_address = '{2}') " \
                 "AND type_of_recipient = 'From' " \
                 "AND year(arrival_date) = %s AND month(arrival_date) = %s " \
